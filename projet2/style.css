@@ -1,0 +1,322 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{-webkit-box-sizing:border-box;box-sizing:border-box}*,*::before,*::after{-webkit-box-sizing:inherit;box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}td:not([align]),th:not([align]){text-align:left}
+
+*{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+body{
+    font-size: 10px;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+/*Barre latéral*/
+
+.main__sidebar{
+    background-color: rgb(254, 202, 7);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-flex: 1.4;
+        -ms-flex: 1.4;
+            flex: 1.4;
+}
+    .main__sidebar h2{
+        background-color: rgb(64, 64, 64);
+        color: rgb(254, 202, 7);
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 700;
+        font-size: 11px;
+        height: 15px;
+        padding: 1px 3px 0;
+        letter-spacing: 0.4px;
+    }
+
+.sidebar__contact{
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+}
+    .sidebar__contact p{
+        text-align: center;
+        margin: 20px  0;
+        color: rgb(74, 74, 74)
+    }
+        .sidebar__contact img{
+            border-radius: 50%;
+            height: 80px;
+            width: auto;
+        }
+
+        .sidebar__contact h2{
+            font-weight: normal;
+        }
+
+        .container{
+            padding: 6px;
+            font-size: 9px;
+            text-align: justify;
+            color: rgb(74, 74, 74);
+        }
+            .container ul{
+                margin: 5px  0;
+            }
+
+            .container a{
+                color: inherit;
+                text-decoration: none;
+            }
+            .container p{
+                padding-bottom: 5px;
+            }
+
+.sidebar__about{
+    color:gray;
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+}
+.sidebar__hobby{
+    -webkit-box-flex: 0.5;
+        -ms-flex: 0.5;
+            flex: 0.5;
+}
+    .sidebar__hobby img{
+        margin: 20px 5px;
+        height: 15px;
+        width: auto;
+    }
+
+
+/*Page centrale*/
+
+
+.main__section{
+    background-color: rgb(255, 255, 255);
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+}
+    .section__topbar{
+        margin: 30px 10px;
+    }
+        .section__topbar h1{
+            font-size: 18px;
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+            .section__topbar h1 span{
+                color: rgb(254, 202, 7);
+            }
+        
+        .section__topbar h3{
+            font-weight: 700;
+            font-size: 11px;
+            color: rgb(74, 74, 74);
+            margin-bottom: 80px;
+        }
+        .section__topbar h3 span{
+            -webkit-text-decoration: underline rgb(254, 202, 7);
+                    text-decoration: underline rgb(254, 202, 7);
+        }
+
+.main__body{
+    margin: 0 10px;
+}
+    .main__body h2{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 11px;
+    padding: 5px;
+    }
+    .body__boxImg{
+            position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: end;
+                -ms-flex-align: end;
+                    align-items: flex-end;  
+        }
+        .body__boxImg img{
+                height: 15px;
+                width: auto;
+                margin: 0 5px 5px 0;
+            }
+            .body__boxImg::after{
+                content: ' ';
+                position: absolute;
+                bottom: 0;
+                display: block;
+                height: 1px;
+                width: 100%;
+                background-color: rgb(254, 202, 7);
+            }
+
+            .body__article{
+                margin: 15px 0 15px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                        justify-content: space-between;
+                font-size: 9px;
+                color: rgb(74, 74, 74);
+            }
+                .article__pastDate::before{
+                    content: '•';
+                    color: rgb(254, 202, 7);
+                    display: inline-block;
+                    width: 1em;
+                    -webkit-transform: scale(2);
+                        -ms-transform: scale(2);
+                            transform: scale(2);
+                }
+                .article__lastDate::before{
+                    content: '◉';
+                    color: rgb(254, 202, 7);
+                    display: inline-block;
+                    width: 1em;
+                    -webkit-transform: scale(1.2) translate(-40%, 00%);
+                        -ms-transform: scale(1.2) translate(-40%, 00%);
+                            transform: scale(1.2) translate(-40%, 00%);
+                }
+
+                .article__place{
+                    margin-left: 10px;
+                }
+
+                .article__lastDate, .article__pastDate{
+                    white-space: nowrap;
+                }
+                .article__paragraph{
+                    color: gray;
+                    width: 70%;
+                }
+                    .article__paragraph h3{
+                        font-size: 10px;
+                        font-weight: 700;
+                        color: rgb(74, 74, 74)
+                    }
+                    .article__paragraph h3, .article__paragraph p{
+                        margin-bottom: 5px;
+                    }
+                    .article__paragraph li{
+                        list-style-type: disc;
+                    }
+                    
+                    
+@media only screen and (min-width: 500px){
+    .main__sidebar{
+        -webkit-box-flex: 1.7;
+            -ms-flex: 1.7;
+                flex: 1.7;
+    }
+    .main__sidebar h2{
+        font-size: 16px;
+        height: 18px;
+    }
+
+    .main__hobby img{
+        margin: 15px;
+        height: 30px;
+    }
+
+    .container{
+        font-size: 11px;
+        padding: 12px;
+    }
+
+    .section__topbar{
+        margin: 30px 30px;
+    }
+        .section__topbar h1{
+            font-size: 30px;
+        }
+
+        .section__topbar h3{
+            font-size: 16px;
+            margin-bottom: 70px;
+        }
+
+        .main__body{
+            margin: 0 30px;
+        }
+            .main__body h2{
+                font-size: 16px;
+                padding: 10px;
+            }
+            
+                .body__boxImg img{
+                    height: 20px;
+                }
+            .body__article{
+                font-size: 11px;
+            }
+            
+                    .article__paragraph h3{
+                        font-size: 13px;
+                    }
+    
+}
+
+@media only screen and (min-width: 800px){
+    .main{
+        margin: 0 auto;
+        max-width: 800px;
+    }
+
+    .sidebar__contact img{
+        height: 120px;
+    }
+    .main__sidebar{
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+    }       
+        .main__sidebar h2{
+            height: 24px;
+            padding: 4px 3px 0;
+        }
+
+        .sidebar__hobby img{
+            margin: 10px;
+            height: 25px;
+        }
+
+        .container{
+            font-size: 11px;
+            padding: 15px;
+        }
+            .container ul{
+                margin: 10px  0;
+            }
+
+        .section__topbar h1{
+            font-size: 32px;
+        }
+        .section__topbar h3{
+            margin-bottom: 90px;
+        }  
+                .body__boxImg img{
+                    height: 20px;
+                }
+            .body__article{
+                font-size: 11px;
+            }
+}
