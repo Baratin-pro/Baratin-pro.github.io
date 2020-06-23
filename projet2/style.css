@@ -30,9 +30,9 @@ body{
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-            -webkit-box-flex: 1;
-                -ms-flex: 1;
-                    flex: 1;
+            -webkit-box-flex: 1.2;
+                -ms-flex: 1.2;
+                    flex: 1.2;
 }
     .main__sidebar h2{
         background-color:rgba(0, 0, 0, 0.8);
@@ -239,11 +239,80 @@ body{
                     .article__paragraph h3, .article__paragraph p{
                         margin-bottom: 5px;
                     }
-                    .article__paragraph li{
-                        list-style-type: disc;
-                    }
                     
-                   
+                    
+ 
+@media only screen and (min-width: 360px){
+
+    .main__sidebar{
+        background-color: rgb(29, 111, 181);
+        -webkit-box-flex: 1.2;
+            -ms-flex: 1.2;
+                flex: 1.2;
+    }
+        .main__sidebar h2{
+            font-size: 14px;
+            height: 17px;
+        }
+    
+            .container{
+                font-size: 11px;
+            }
+                .container ul{
+                    margin: 10px  0;
+                }
+                .container p{
+                    padding-bottom: 8px;
+                }
+
+        .hobby__boxIcon{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            margin: 10px 0;
+        }
+    
+            .boxIcon__icon{
+                padding: 8px;
+                font-size: 10px;
+            }
+    
+    
+    /**************************************Page centrale****************************************/
+    
+            .section__topbar h1{
+                font-size: 22px;
+            }
+            
+            .section__topbar h3{
+                font-size: 14px;
+            }
+ 
+    
+    .main__body{
+        margin: 0 10px;
+    }
+        .main__body h2{
+        font-size: 14px;
+        padding-bottom: 2px;
+        }
+    
+                .body__article{
+                    font-size: 11px;
+                }
+                    .article__paragraph{
+                        margin-bottom: 10px;
+                    }
+                        .article__paragraph h3{
+                            font-size: 12px;
+                        }
+}
+                    
+
+
 @media only screen and (min-width: 750px){
     .main{
         margin: 0 auto;
@@ -309,6 +378,16 @@ body{
         .body__article{
             font-size: 15px;
             margin: 25px 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
         }
             .article__date {
                     display: inline-block;
@@ -323,6 +402,9 @@ body{
                 }
                 .article__paragraph p {
                     font-size: 15px;
+                }
+                .article__paragraph li{
+                    list-style-type: disc;
                 }
 
 }
