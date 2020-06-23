@@ -6,7 +6,7 @@
 }
 body{
     font-size: 10px;
-    background-color: rgba(0, 0, 0, .92);
+    background-color: rgba(0, 0, 0, .85);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -30,9 +30,9 @@ body{
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-flex: 1.4;
-        -ms-flex: 1.4;
-            flex: 1.4;
+            -webkit-box-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
 }
     .main__sidebar h2{
         background-color:rgba(0, 0, 0, 0.8);
@@ -139,6 +139,11 @@ body{
                     text-decoration: underline rgb(29, 111, 181);
         }
 
+
+
+
+
+
 .main__body{
     margin: 0 10px;
 }
@@ -155,7 +160,7 @@ body{
             display: flex;
             -webkit-box-align: end;
                 -ms-flex-align: end;
-                    align-items: flex-end;  
+                    align-items: flex-end; 
         }
 
             .boxImg__icon{
@@ -173,51 +178,63 @@ body{
             }
 
             .body__article{
-                margin: 15px 0 15px;
+                margin: 15px 0;
                 display: -webkit-box;
                 display: -ms-flexbox;
                 display: flex;
-                -webkit-box-pack: justify;
-                    -ms-flex-pack: justify;
-                        justify-content: space-between;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
                 font-size: 9px;
                 color: rgb(74, 74, 74);
             }
-                .article__pastDate::before{
-                    content: '•';
-                    color: rgb(29, 111, 181);
-                    display: inline-block;
-                    width: 1em;
-                    -webkit-transform: scale(2);
-                        -ms-transform: scale(2);
-                            transform: scale(2);
-                }
-                .article__lastDate::before{
-                    content: '◉';
-                    color: rgb(29, 111, 181);
-                    display: inline-block;
-                    width: 1em;
-                    -webkit-transform: scale(1.2) translate(-40%, 00%);
-                        -ms-transform: scale(1.2) translate(-40%, 00%);
-                            transform: scale(1.2) translate(-40%, 00%);
+                .article__date {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    margin-bottom: 10px;
                 }
 
-                .article__place{
-                    margin-left: 10px;
-                    
-                }
+                    .date__pastDate::before{
+                        content: '•';
+                        color: rgb(29, 111, 181);
+                        display: inline-block;
+                        width: 1em;
+                        -webkit-transform: scale(2);
+                            -ms-transform: scale(2);
+                                transform: scale(2);
+                    }
+                    .date__lastDate::before{
+                        content: '◉';
+                        color: rgb(29, 111, 181);
+                        display: inline-block;
+                        width: 1em;
+                        -webkit-transform: scale(1.2) translate(-40%, 00%);
+                            -ms-transform: scale(1.2) translate(-40%, 00%);
+                                transform: scale(1.2) translate(-40%, 00%);
+                    }
 
-                .article__lastDate, .article__pastDate{
-                    white-space: nowrap;
-                }
+                    .date__place{
+                        margin-left: 10px;
+                        
+                    }
+
+                    .date__lastDate, .date__pastDate{
+                        white-space: nowrap;
+                    }
+
                 .article__paragraph{
                     color: gray;
-                    width: 70%;
                 }
                     .article__paragraph h3{
                         font-size: 10px;
                         font-weight: 700;
                         color: rgb(74, 74, 74)
+                    }
+                    .article__paragraph p {
+                        font-weight: 700;
+                        font-style: italic;
                     }
                     .article__paragraph h3, .article__paragraph p{
                         margin-bottom: 5px;
@@ -226,104 +243,96 @@ body{
                         list-style-type: disc;
                     }
                     
-                    
-@media only screen and (min-width: 500px){
-    .main__sidebar{
-        -webkit-box-flex: 1.7;
-            -ms-flex: 1.7;
-                flex: 1.7;
-    }
-    .sidebar__contact img{
-        height: 100px;
-    }
-    .main__sidebar h2{
-        font-size: 16px;
-        height: 18px;
-    }
-
-    .boxIcon__icon{
-        padding: 10px;
-        font-size: 12px;
-        margin: 0 3px;
-    }
-
-    .container{
-        font-size: 11px;
-        padding: 12px;
-    }
-
-    .section__topbar{
-        margin: 30px 30px;
-    }
-        .section__topbar h1{
-            font-size: 30px;
-        }
-
-        .section__topbar h3{
-            font-size: 16px;
-            margin-bottom: 70px;
-        }
-
-        .main__body{
-            margin: 0 30px;
-        }
-            .main__body h2{
-                font-size: 16px;
-            }
-            
-            .body__article{
-                font-size: 11px;
-            }
-            
-                    .article__paragraph h3{
-                        font-size: 13px;
-                    }
-    
-}
-
-@media only screen and (min-width: 800px){
+                   
+@media only screen and (min-width: 750px){
     .main{
         margin: 0 auto;
-        max-width: 800px;
+        max-width: 900px;
     }
-
-    .sidebar__contact img{
-        height: 120px;
-    }
-    .main__sidebar{
-        -webkit-box-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
-    }       
-        .main__sidebar h2{
-            height: 24px;
-            padding: 4px 3px 0;
+        .main__sidebar{
+            -webkit-box-flex: 1.2;
+                -ms-flex: 1.2;
+                    flex: 1.2;
         }
+            .main__sidebar h2{
+                height: 26px;
+                font-size: 20px;
+                padding: 3px 3px 0;
+            }
+            
+            .sidebar__contact img{
+                height: 120px;
+            }
 
-        .boxIcon__icon{
-            padding: 8px;
+                .container{
+                    font-size: 15px;
+                    padding: 15px;
+                }
+                    .container ul{
+                        margin: 10px  0;
+                    }
+                    .container p{
+                        margin-bottom: 8px;
+                    }
+
+                .hobby__boxIcon{
+                    margin: 20px 10px;
+                }
+
+                    .boxIcon__icon{
+                        padding: 12px;
+                        font-size: 18px;
+                        margin: 0 3px;
+                    }
+                    
+
+    
+        .section__topbar{
+            margin: 30px 30px;
+        }
+            .section__topbar h1{
+                font-size: 36px;
+            }
+
+            .section__topbar h3{
+                font-size: 18px;
+                margin-bottom: 90px;
+            }
+
+    .main__body{
+        margin: 0 30px 40px;
+    }
+        .main__body h2{
+            font-size: 20px;
+        }
+        
+        .body__article{
             font-size: 15px;
-        } 
-
-        .container{
-            font-size: 11px;
-            padding: 15px;
+            margin: 25px 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
         }
-            .container ul{
-                margin: 10px  0;
+            .article__date {
+                    display: inline-block;
+                }
+            
+            .article__paragraph{
+                width: 70%;
             }
+    
+                .article__paragraph h3{
+                    font-size: 18px;
+                }
+                .article__paragraph p {
+                    font-size: 15px;
+                }
 
-        .section__topbar h1{
-            font-size: 32px;
-        }
-        .section__topbar h3{
-            margin-bottom: 90px;
-        }  
-            .body__article{
-                font-size: 11px;
-            }
 }
-
-
-
- 
