@@ -6,7 +6,7 @@
 }
 body{
     font-size: 10px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, .92);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -16,10 +16,10 @@ body{
     display: flex;
 }
 
-/*Barre latéral*/
+/****************************Barre latéral************************/
 
 .main__sidebar{
-    background-color: rgb(254, 202, 7);
+    background-color: rgb(29, 111, 181);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -35,8 +35,8 @@ body{
             flex: 1.4;
 }
     .main__sidebar h2{
-        background-color: rgb(64, 64, 64);
-        color: rgb(254, 202, 7);
+        background-color:rgba(0, 0, 0, 0.8);
+        color: rgb(29, 111, 181);
         text-transform: uppercase;
         text-align: center;
         font-weight: 700;
@@ -51,26 +51,19 @@ body{
         -ms-flex: 2;
             flex: 2;
 }
-    .sidebar__contact p{
-        text-align: center;
-        margin: 20px  0;
-        color: rgb(74, 74, 74)
-    }
         .sidebar__contact img{
+            display: block;
             border-radius: 50%;
             height: 80px;
             width: auto;
-        }
-
-        .sidebar__contact h2{
-            font-weight: normal;
+            margin: 20px auto;
         }
 
         .container{
             padding: 6px;
             font-size: 9px;
             text-align: justify;
-            color: rgb(74, 74, 74);
+            color: rgba(255, 255, 255, 0.9);
         }
             .container ul{
                 margin: 5px  0;
@@ -85,7 +78,6 @@ body{
             }
 
 .sidebar__about{
-    color:gray;
     -webkit-box-flex: 3;
         -ms-flex: 3;
             flex: 3;
@@ -95,14 +87,27 @@ body{
         -ms-flex: 0.5;
             flex: 0.5;
 }
-    .sidebar__hobby img{
-        margin: 20px 5px;
-        height: 15px;
-        width: auto;
+    .hobby__boxIcon{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        margin: 5px;
     }
 
+        .boxIcon__icon{
+            padding: 5px;
+            font-size: 8px;
+            margin: 0 2px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            color: rgba(255, 255, 255, 0.9);
+        }
 
-/*Page centrale*/
+
+/**************************************Page centrale****************************************/
 
 
 .main__section{
@@ -120,7 +125,7 @@ body{
             text-transform: uppercase;
         }
             .section__topbar h1 span{
-                color: rgb(254, 202, 7);
+                color: rgb(29, 111, 181);
             }
         
         .section__topbar h3{
@@ -130,8 +135,8 @@ body{
             margin-bottom: 80px;
         }
         .section__topbar h3 span{
-            -webkit-text-decoration: underline rgb(254, 202, 7);
-                    text-decoration: underline rgb(254, 202, 7);
+            -webkit-text-decoration: underline rgb(29, 111, 181);
+                    text-decoration: underline rgb(29, 111, 181);
         }
 
 .main__body{
@@ -141,7 +146,7 @@ body{
     font-weight: 700;
     text-transform: uppercase;
     font-size: 11px;
-    padding: 5px;
+    padding-bottom: 5px;
     }
     .body__boxImg{
             position: relative;
@@ -152,11 +157,11 @@ body{
                 -ms-flex-align: end;
                     align-items: flex-end;  
         }
-        .body__boxImg img{
-                height: 15px;
-                width: auto;
-                margin: 0 5px 5px 0;
+
+            .boxImg__icon{
+                color: rgb(29, 111, 181);
             }
+
             .body__boxImg::after{
                 content: ' ';
                 position: absolute;
@@ -164,7 +169,7 @@ body{
                 display: block;
                 height: 1px;
                 width: 100%;
-                background-color: rgb(254, 202, 7);
+                background-color: rgb(29, 111, 181);
             }
 
             .body__article{
@@ -180,7 +185,7 @@ body{
             }
                 .article__pastDate::before{
                     content: '•';
-                    color: rgb(254, 202, 7);
+                    color: rgb(29, 111, 181);
                     display: inline-block;
                     width: 1em;
                     -webkit-transform: scale(2);
@@ -189,7 +194,7 @@ body{
                 }
                 .article__lastDate::before{
                     content: '◉';
-                    color: rgb(254, 202, 7);
+                    color: rgb(29, 111, 181);
                     display: inline-block;
                     width: 1em;
                     -webkit-transform: scale(1.2) translate(-40%, 00%);
@@ -199,6 +204,7 @@ body{
 
                 .article__place{
                     margin-left: 10px;
+                    
                 }
 
                 .article__lastDate, .article__pastDate{
@@ -227,14 +233,18 @@ body{
             -ms-flex: 1.7;
                 flex: 1.7;
     }
+    .sidebar__contact img{
+        height: 100px;
+    }
     .main__sidebar h2{
         font-size: 16px;
         height: 18px;
     }
 
-    .main__hobby img{
-        margin: 15px;
-        height: 30px;
+    .boxIcon__icon{
+        padding: 10px;
+        font-size: 12px;
+        margin: 0 3px;
     }
 
     .container{
@@ -259,12 +269,8 @@ body{
         }
             .main__body h2{
                 font-size: 16px;
-                padding: 10px;
             }
             
-                .body__boxImg img{
-                    height: 20px;
-                }
             .body__article{
                 font-size: 11px;
             }
@@ -294,10 +300,10 @@ body{
             padding: 4px 3px 0;
         }
 
-        .sidebar__hobby img{
-            margin: 10px;
-            height: 25px;
-        }
+        .boxIcon__icon{
+            padding: 8px;
+            font-size: 15px;
+        } 
 
         .container{
             font-size: 11px;
@@ -313,10 +319,11 @@ body{
         .section__topbar h3{
             margin-bottom: 90px;
         }  
-                .body__boxImg img{
-                    height: 20px;
-                }
             .body__article{
                 font-size: 11px;
             }
 }
+
+
+
+ 
