@@ -14,13 +14,18 @@ body{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 /****************************Barre latéral************************/
 
 .main__sidebar{
     background-color: rgb(29, 111, 181);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -74,6 +79,8 @@ body{
         }
 
         .container__information{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
         }
             .container__information li:first-child{
@@ -240,7 +247,10 @@ body{
 
 @media only screen and (min-width: 600px){
     .main{
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
     }
     
         .main__sidebar{
