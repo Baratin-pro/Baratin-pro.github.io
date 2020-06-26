@@ -1,0 +1,23 @@
+
+/*utils : variables, fonctions, mixins et extensions */
+
+@import "./utils/variables";  
+@import "./utils/mixins";
+
+/*base: fondations du site, police de cartères, les normes */
+
+@import "./base/base";
+@import "./base/typography";
+
+/*Components: composants */
+
+@import "./components/buttons";
+
+/*Layout : blocs bem réutilisable*/
+
+@import "./layouts/header";
+@import "./layouts/footer";
+
+/*Pages: blocs ne s'appliquant qu'à une seule page */
+
+@import "./pages/home.scss";
