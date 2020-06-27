@@ -16,8 +16,7 @@
 /*Layout : blocs bem réutilisable*/
 
 @import "./layouts/header";
+@import "./layouts/body";
 @import "./layouts/footer";
 
 /*Pages: blocs ne s'appliquant qu'à une seule page */
-
-@import "./pages/home.scss";

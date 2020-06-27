@@ -4,3 +4,13 @@
 *{
     box-sizing: border-box;
 }
+.omf{
+    display: grid;
+    grid-template-columns: 1px repeat(3, 1fr) 1px; //nbr de colonnnes 
+    grid-template-rows: auto repeat(4, 300px) repeat(2, auto);
+    grid-gap: 20px;
+    @include tablet-only{
+        grid-template-columns: 1px repeat(4, 1fr) 1px;
+        grid-gap: 50px;
+    } 
+}

@@ -1,0 +1,17 @@
+/**************** Pied de la page ****************/
+
+.omf-bottombar{
+    background: $background-color;
+    grid-column: 1/ span 5;
+    display: flex;
+    justify-content: space-between;
+    h2{
+        margin: 5px;
+        color: $primary-color;
+        font-size: map-get($font-size, medium);
+    }
+    @include tablet-only{
+        grid-column: 1 / span 6;
+    } 
+}
+    
