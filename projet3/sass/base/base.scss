@@ -4,8 +4,14 @@
 *{
     box-sizing: border-box;
 }
+
 .omf{
-    max-width: 800px;
+    margin: 0;
+    padding:0;
+    display: grid;
+    grid-template-rows: [omf-topbar] 100px [omf-menu] min-content [omf-next__container] min-content [omf-bottombar] 45px;
+    grid-template-columns: 1fr;
+    max-width: 900px;
     margin: 0 auto;
 }
 

@@ -55,7 +55,12 @@ td:not([align]), th:not([align]) {
 }
 
 .omf {
-  max-width: 800px;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: [omf-topbar] 100px [omf-menu] min-content [omf-next__container] min-content [omf-bottombar] 45px;
+  grid-template-columns: 1fr;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -109,8 +114,9 @@ td:not([align]), th:not([align]) {
 
 /**************** Tête de la page ****************/
 .omf-topbar {
+  grid-row: omf-topbar;
+  grid-column: 1;
   background: #579c87;
-  grid-column: 1/span 5;
 }
 .omf-topbar h1 {
   color: #fdcb46;
@@ -121,14 +127,17 @@ td:not([align]), th:not([align]) {
 
 /**************** Corps de la page ****************/
 .omf-menu {
-  margin: 30px 40px;
+  grid-row: omf-menu;
+  grid-column: 1;
   display: grid;
+  justify-content: center;
+  grid-template-areas: "note" "chic" "delice" "palette";
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 250px) auto;
-  grid-gap: 20px;
+  grid-template-rows: repeat(4, 350px);
+  grid-row-gap: 20px;
+  margin: 30px 40px;
 }
 .omf-menu__card {
-  grid-column: 1/span 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -140,6 +149,7 @@ td:not([align]), th:not([align]) {
   text-align: center;
 }
 .omf-menu__card--note {
+  grid-area: note;
   background: #fcdfdb;
 }
 .omf-menu__card--note h3 {
@@ -158,12 +168,8 @@ td:not([align]), th:not([align]) {
   -webkit-background-clip: text;
   color: transparent;
 }
-@media only screen and (min-width: 700px) {
-  .omf-menu__card--note {
-    grid-column: 2/span 2;
-  }
-}
 .omf-menu__card--chic {
+  grid-area: chic;
   background: #fff5fe;
 }
 .omf-menu__card--chic h3 {
@@ -178,12 +184,8 @@ td:not([align]), th:not([align]) {
   font-size: 1.8em;
   color: #c77412;
 }
-@media only screen and (min-width: 700px) {
-  .omf-menu__card--chic {
-    grid-column: 5/span 2;
-  }
-}
 .omf-menu__card--delice {
+  grid-area: delice;
   background: #f9f9f9;
 }
 .omf-menu__card--delice h3 {
@@ -198,12 +200,8 @@ td:not([align]), th:not([align]) {
   font-size: 2em;
   color: #0887fb;
 }
-@media only screen and (min-width: 700px) {
-  .omf-menu__card--delice {
-    grid-column: 2/span 2;
-  }
-}
 .omf-menu__card--palette {
+  grid-area: palette;
   background: #fdfffd;
 }
 .omf-menu__card--palette h3 {
@@ -219,56 +217,45 @@ td:not([align]), th:not([align]) {
   color: #79c45c;
 }
 @media only screen and (min-width: 700px) {
-  .omf-menu__card--palette {
-    grid-column: 5/span 2;
-  }
-}
-@media only screen and (min-width: 700px) {
   .omf-menu {
-    grid-template-columns: 1fr repeat(2, 100px) 50px repeat(2, 100px) 1fr;
-    grid-template-rows: 350px 350px 50px;
-    grid-column-gap: 0px;
-    grid-row-gap: 40px;
+    grid-template-areas: "note chic" "delice palette";
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(2, 300px);
+    grid-gap: 40px;
     margin: 30px 0;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  .omf-menu {
-    grid-template-rows: 300px 300px 50px;
   }
 }
 
 /**************** prochainement de la page ****************/
-.omf-next {
+.omf-next__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: omf-next__container;
+  grid-column: 1;
+  margin-bottom: 40px;
+}
+.omf-next__container__box {
   background: #579c87;
   border-radius: 10px;
   padding: 5px 20px 7px;
-  margin-bottom: 50px;
 }
-.omf-next h2 {
+.omf-next__container__box h2 {
   color: #fdcb46;
-  font-size: 1.6em;
+  font-size: 1.8em;
   text-align: center;
-}
-@media only screen and (min-width: 700px) {
-  .omf-next {
-    grid-column: 3/span 3;
-    padding: 10px 0 40px;
-    margin-bottom: 70px;
-  }
 }
 
 /**************** Pied de la page ****************/
 .omf-bottombar {
+  grid-row: omf-bottombar;
+  grid-column: 1;
   position: fixed;
   z-index: 3;
   bottom: 0;
   left: 0;
   right: 0;
-  max-width: 800px;
-  margin: 0 auto;
   background: #579c87;
-  grid-column: 1/span 5;
   display: flex;
   justify-content: space-between;
 }
@@ -276,6 +263,12 @@ td:not([align]), th:not([align]) {
   margin: 10px;
   color: #fdcb46;
   font-size: 1.3em;
+}
+@media only screen and (min-width: 1000px) {
+  .omf-bottombar {
+    margin: 0 auto;
+    width: 900px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

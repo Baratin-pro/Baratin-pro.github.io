@@ -1,21 +1,24 @@
 /**************** Pied de la page ****************/
 
 .omf-bottombar{
+    grid-row: omf-bottombar;
+    grid-column: 1;
     position: fixed;
     z-index: 3;
     bottom: 0;
     left: 0;
     right: 0;
-    max-width: 800px;
-    margin: 0 auto;
     background: $background-color;
-    grid-column: 1/ span 5;
     display: flex;
     justify-content: space-between;
     h2{
         margin: 10px;
         color: $primary-color;
         font-size: map-get($font-size, bottom_a);
+    }
+    @include computer-only{
+        margin: 0 auto;
+        width: 900px;
     }
 }
     
