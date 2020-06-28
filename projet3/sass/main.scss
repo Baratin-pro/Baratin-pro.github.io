@@ -1,22 +1,21 @@
 
-/*utils : variables, fonctions, mixins et extensions */
-
+// utils : variables, fonctions, mixins et extensions
+@import "./base/base";
 @import "./utils/variables";  
 @import "./utils/mixins";
 
-/*base: fondations du site, police de cartères, les normes */
+// base: fondations du site, police de cartères, les normes
 
-@import "./base/base";
 @import "./base/typography";
 
-/*Components: composants */
+// Components: composants
 
 @import "./components/buttons";
 
-/*Layout : blocs bem réutilisable*/
+// Layout : blocs bem réutilisable
 
 @import "./layouts/header";
 @import "./layouts/body";
 @import "./layouts/footer";
 
-/*Pages: blocs ne s'appliquant qu'à une seule page */
+//Pages: blocs ne s'appliquant qu'à une seule page

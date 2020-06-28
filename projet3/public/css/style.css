@@ -1,8 +1,4 @@
 @charset "UTF-8";
-/*utils : variables, fonctions, mixins et extensions */
-/**** Couleur ****/
-/**** Police ****/
-/*base: fondations du site, police de cartères, les normes */
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -59,16 +55,8 @@ td:not([align]), th:not([align]) {
 }
 
 .omf {
-  display: grid;
-  grid-template-columns: 1px repeat(3, 1fr) 1px;
-  grid-template-rows: auto repeat(4, 300px) repeat(2, auto);
-  grid-gap: 20px;
-}
-@media only screen and (min-width: 700px) {
-  .omf {
-    grid-template-columns: 1px repeat(4, 1fr) 1px;
-    grid-gap: 50px;
-  }
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /**************** Font-family ****************/
@@ -77,44 +65,48 @@ td:not([align]), th:not([align]) {
   font-weight: 700;
 }
 
-.omf-menu--note h3 {
+.omf-menu__card--note h3 {
   font-family: "Devonshire", cursive;
   font-weight: 300;
 }
 
-.omf-menu--note p {
+.omf-menu__card--note p {
   font-family: "Itim", cursive;
   font-weight: 400;
+  font-style: italic;
 }
 
-.omf-menu--chic h3 {
+.omf-menu__card--chic h3 {
   font-family: "Croissant One", cursive;
   font-weight: 400;
 }
 
-.omf-menu--chic p {
+.omf-menu__card--chic p {
   font-family: "DM Serif Text", serif;
   font-weight: 400;
 }
 
-.omf-menu--delice h3 {
+.omf-menu__card--delice h3 {
   font-family: "Dancing Script", cursive;
   font-weight: 500;
 }
 
-.omf-menu--delice p, .omf-menu--palette p {
+.omf-menu__card--delice p, .omf-menu__card--palette p {
   font-family: "Nanum Pen Script", cursive;
   font-weight: 400;
   font-style: italic;
 }
 
-.omf-menu--palette h3 {
+.omf-menu__card--palette h3 {
   font-family: "Kaushan Script", cursive;
   font-weight: 400;
 }
 
-/*Components: composants */
-/*Layout : blocs bem réutilisable*/
+.omf-next h2, .omf-bottombar h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
 /**************** Tête de la page ****************/
 .omf-topbar {
   background: #579c87;
@@ -126,140 +118,164 @@ td:not([align]), th:not([align]) {
   text-align: center;
   padding: 20px 0;
 }
-@media only screen and (min-width: 700px) {
-  .omf-topbar {
-    grid-column: 1/span 6;
-  }
-}
 
 /**************** Corps de la page ****************/
 .omf-menu {
-  grid-column: 2/span 3;
-  margin: 0 40px;
+  margin: 30px 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 250px) auto;
+  grid-gap: 20px;
+}
+.omf-menu__card {
+  grid-column: 1/span 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 15px rgba(175, 175, 175, 0.7);
 }
-.omf-menu h3 {
-  font-size: 1.4em;
+.omf-menu__card h3 {
   padding-bottom: 10px;
   text-align: center;
 }
-.omf-menu p {
-  font-size: 2em;
-}
-.omf-menu--note {
+.omf-menu__card--note {
   background: #fcdfdb;
 }
-.omf-menu--note p {
+.omf-menu__card--note h3 {
+  font-size: 1.3em;
+}
+.omf-menu__card--note p {
   color: #3c1218;
+  font-size: 1.8em;
   text-transform: uppercase;
 }
-.omf-menu--note .menu__icon {
+.omf-menu__card--note .note__icon {
   background-clip: text;
   background-image: linear-gradient(0.25turn, #f15861, #f78f6a);
-  font-size: 2em;
+  font-size: 2.1em;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
 @media only screen and (min-width: 700px) {
-  .omf-menu--note {
+  .omf-menu__card--note {
     grid-column: 2/span 2;
   }
 }
-.omf-menu--chic {
+.omf-menu__card--chic {
   background: #fff5fe;
 }
-.omf-menu--chic h3 {
+.omf-menu__card--chic h3 {
+  font-size: 0.9em;
   background-clip: text;
   background-image: linear-gradient(0.25turn, #d8852e, #905bfd);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
-.omf-menu--chic p {
+.omf-menu__card--chic p {
+  font-size: 1.8em;
   color: #c77412;
 }
 @media only screen and (min-width: 700px) {
-  .omf-menu--chic {
-    grid-column: 4/span 2;
+  .omf-menu__card--chic {
+    grid-column: 5/span 2;
   }
 }
-.omf-menu--delice {
+.omf-menu__card--delice {
   background: #f9f9f9;
 }
-.omf-menu--delice h3 {
+.omf-menu__card--delice h3 {
+  font-size: 1.3em;
   background-clip: text;
   background-image: linear-gradient(0.25turn, #2140df, #1789f9);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
-.omf-menu--delice p {
+.omf-menu__card--delice p {
+  font-size: 2em;
   color: #0887fb;
 }
 @media only screen and (min-width: 700px) {
-  .omf-menu--delice {
+  .omf-menu__card--delice {
     grid-column: 2/span 2;
   }
 }
-.omf-menu--palette {
-  background: #f9f9f9;
+.omf-menu__card--palette {
+  background: #fdfffd;
 }
-.omf-menu--palette h3 {
+.omf-menu__card--palette h3 {
+  font-size: 1.3em;
   background-clip: text;
   background-image: linear-gradient(0.25turn, #42973c, #bfff7e);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
-.omf-menu--palette p {
+.omf-menu__card--palette p {
+  font-size: 2em;
   color: #79c45c;
 }
 @media only screen and (min-width: 700px) {
-  .omf-menu--palette {
-    grid-column: 4/span 2;
+  .omf-menu__card--palette {
+    grid-column: 5/span 2;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .omf-menu {
+    grid-template-columns: 1fr repeat(2, 100px) 50px repeat(2, 100px) 1fr;
+    grid-template-rows: 350px 350px 50px;
+    grid-column-gap: 0px;
+    grid-row-gap: 40px;
+    margin: 30px 0;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .omf-menu {
+    grid-template-rows: 300px 300px 50px;
   }
 }
 
 /**************** prochainement de la page ****************/
 .omf-next {
   background: #579c87;
-  grid-column: 3/span 1;
-  border-radius: 5px;
-  padding: 5px 20px;
+  border-radius: 10px;
+  padding: 5px 20px 7px;
+  margin-bottom: 50px;
 }
 .omf-next h2 {
   color: #fdcb46;
-  font-size: 30px;
+  font-size: 1.6em;
   text-align: center;
 }
 @media only screen and (min-width: 700px) {
   .omf-next {
-    grid-column: 3/span 2;
+    grid-column: 3/span 3;
+    padding: 10px 0 40px;
+    margin-bottom: 70px;
   }
 }
 
 /**************** Pied de la page ****************/
 .omf-bottombar {
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 800px;
+  margin: 0 auto;
   background: #579c87;
   grid-column: 1/span 5;
   display: flex;
   justify-content: space-between;
 }
 .omf-bottombar h2 {
-  margin: 5px;
+  margin: 10px;
   color: #fdcb46;
+  font-size: 1.3em;
 }
-@media only screen and (min-width: 700px) {
-  .omf-bottombar {
-    grid-column: 1/span 6;
-  }
-}
-
-/*Pages: blocs ne s'appliquant qu'à une seule page */
 
 /*# sourceMappingURL=style.css.map */

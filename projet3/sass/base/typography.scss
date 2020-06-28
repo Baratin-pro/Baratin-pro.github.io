@@ -4,39 +4,44 @@
     font-weight: 700;
 }
 
-.omf-menu--note h3{
+.omf-menu__card--note h3{
     font-family: 'Devonshire', cursive;
     font-weight: 300;
 }
 
-.omf-menu--note p{
+.omf-menu__card--note p{
     font-family: 'Itim', cursive;
     font-weight: 400;
+    font-style: italic;
 }
 
-.omf-menu--chic h3{
+.omf-menu__card--chic h3{
     font-family: 'Croissant One', cursive;
     font-weight: 400;
 }
 
-.omf-menu--chic p{
+.omf-menu__card--chic p{
     font-family: 'DM Serif Text', serif;
     font-weight: 400;
 }
 
-.omf-menu--delice h3{
+.omf-menu__card--delice h3{
     font-family: 'Dancing Script', cursive;
     font-weight: 500;
 }
 
-.omf-menu--delice p, .omf-menu--palette p{
+.omf-menu__card--delice p, .omf-menu__card--palette p{
     font-family: 'Nanum Pen Script', cursive;
     font-weight: 400;
     font-style: italic;
 }
 
-.omf-menu--palette h3{
+.omf-menu__card--palette h3{
     font-family: 'Kaushan Script', cursive;
     font-weight: 400;
 }
 
+.omf-next h2, .omf-bottombar h2{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}

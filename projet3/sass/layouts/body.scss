@@ -1,43 +1,47 @@
     /**************** Corps de la page ****************/
-
     .omf-menu{
-        grid-column: 2/ span 3;
-        margin: 0 40px;
+        margin: 30px 40px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 250px) auto;
+        grid-gap: 20px;
+    &__card{
+        grid-column: 1 / span 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         box-shadow: 0 0 15px rgba(175, 175, 175, 0.7);
         h3{
-            font-size: map-get($font-size, menu_title);
             padding-bottom: 10px;
             text-align: center;
         }
-        p{
-            font-size: map-get($font-size, menu_link);
-        }
         &--note{
             background: rgb(252, 223, 219);
+            h3{
+                font-size: map-get($font-size, note_h3)
+            }
             p{
                 color: rgb(60, 18, 24);
+                font-size: map-get($font-size, note_p);
                 text-transform: uppercase;
                 }
-            .menu__icon{
+            .note__icon{
                 background-clip: text;
                 background-image: linear-gradient(.25turn,rgb(241, 88, 97), rgb(247, 143, 106) );
-                font-size: map-get($font-size, menu_link);
+                font-size: map-get($font-size, note_icon);
                 background-clip: text;
                 -webkit-background-clip: text;
                 color: transparent;
             }
             @include tablet-only{
-                grid-column: 2 / span 2 ;
-            } 
+                grid-column: 2/ span 2;
+            }
         }
         &--chic{
             background: rgb(255, 245, 254);
             h3{
-                
+                font-size: map-get($font-size, chic_h3);
                 background-clip: text;
                 background-image: linear-gradient(.25turn,rgb(216, 133, 46), rgb(144, 91, 253) );
                 background-clip: text;
@@ -45,31 +49,35 @@
                 color: transparent;
             }
             p{
+                font-size: map-get($font-size, chic_p);
                 color: rgb(199, 116, 18);
             }
             @include tablet-only{
-                grid-column: 4 / span 2;
-            } 
+                grid-column: 5/ span 2;
+            }
         }
         &--delice{
             background: rgb(249, 249, 249);
             h3{
+                font-size: map-get($font-size, delice_h3);
                 background-clip: text;
                 background-image: linear-gradient(.25turn,rgb(33, 64, 223), rgb(23, 137, 249) );
                 background-clip: text;
                 -webkit-background-clip: text;
                 color: transparent;
             }
-            p{
+            p{ 
+                font-size: map-get($font-size, delice_p);
                 color: rgb(8, 135, 251)
             }
             @include tablet-only{
-                grid-column: 2 / span 2;
-            } 
+                grid-column: 2/ span 2;
+            }
         }
         &--palette{
-            background: rgb(249, 249, 249);
+            background: rgb(253, 255, 253);
             h3{
+                font-size: map-get($font-size, palette_h3);
                 background-clip: text;
                 background-image: linear-gradient(.25turn,rgb(66, 151, 60), rgb(191, 255, 126));
                 background-clip: text;
@@ -77,27 +85,40 @@
                 color: transparent;
             }
             p{
+                font-size: map-get($font-size, palette_p);
                 color: rgb(121, 196, 92)
             }
             @include tablet-only{
-                grid-column: 4 / span 2;
-            } 
-        }
+                grid-column: 5 / span 2;
+            }
+        }  
+    } 
+    @include tablet-only{
+        grid-template-columns: 1fr repeat(2, 100px) 50px repeat(2, 100px) 1fr;
+        grid-template-rows: 350px 350px 50px;
+        grid-column-gap: 0px;
+        grid-row-gap: 40px;
+        margin: 30px 0;
     }
-           
+    @include computer-only{
+        grid-template-rows: 300px 300px 50px;
+    }
+}
 /**************** prochainement de la page ****************/
 
 .omf-next{
     background: $background-color;
-    grid-column: 3/ span 1;
-    border-radius: 5px;
-    padding: 5px 20px;
+    border-radius: 10px;
+    padding: 5px 20px 7px;
+    margin-bottom: 50px;
     h2{
         color: $primary-color;
-        font-size: 30px;
+        font-size: map-get($font-size, next_h2);
         text-align: center;
     }
     @include tablet-only{
-        grid-column: 3 / span 2;
-    } 
+        grid-column: 3 / span 3;
+        padding: 10px 0 40px;
+        margin-bottom: 70px;
+    }  
 }

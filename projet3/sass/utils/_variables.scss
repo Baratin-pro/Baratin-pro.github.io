@@ -1,14 +1,28 @@
-/**** Couleur ****/
+//Couleur 
 
-$background-color: rgb(87, 156, 135);
-$primary-color: rgb(253, 203, 70); 
+$background-color: rgb(87, 156, 135); // Background -> topbar et bottombar
+$primary-color: rgb(253, 203, 70);   // Color : -> topbar, next et bottombar
 
-/**** Police ****/
+//Police 
 
 $font-size:(
-    main_title: 3em,
-    menu_title: 1.4em,
-    menu_link: 2em
+    topbar_title: 3em,  // Font -> topbar h1
+    
+    note_h3: 1.3em, // Font -> omf-menu__card--note h3
+    note_p: 1.8em, // Font -> omf-menu__card--note p
+    note_icon: 2.1em, // Font -> omf-menu__card p 
+
+    chic_h3: 0.9em, // Font -> omf-menu__card--chic h3
+    chic_p: 1.8em, // Font -> omf-menu__card--chic p
+
+    delice_h3: 1.3em, // Font -> omf-menu__card--delice h3
+    delice_p: 2em, // Font -> omf-menu__card--delice p
+
+    palette_h3: 1.3em, // Font -> omf-menu__card--delice h3
+    palette_p: 2em, // Font -> omf-menu__card--delice p
+
+    next_h2: 1.6em, //Font -> omf-next h2, omf-bottombar
+    bottom_a : 1.3em // Font -> omf-bottombar a
 );
 
 
