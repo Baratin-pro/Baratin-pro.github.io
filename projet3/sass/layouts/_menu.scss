@@ -1,0 +1,12 @@
+.omf-title{
+    grid-row: omf-menu;
+    display: flex;
+    justify-content: center;
+    margin: 1em 0 0.5em;
+
+    font-size: 1.5em;
+}
+
+.omf-card{
+    grid-row: omf-next__container;
+}

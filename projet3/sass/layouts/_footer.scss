@@ -11,10 +11,15 @@
     background: $background-color;
     display: flex;
     justify-content: space-between;
-    h2{
+    a{
         margin: 10px;
         color: $primary-color;
         font-size: map-get($font-size, bottom_a);
+        text-decoration: none;
+        &:hover{
+            animation: wiggle 0.5s;
+            animation-iteration-count: infinite;
+        }
     }
     @include computer-only{
         margin: 0 auto;

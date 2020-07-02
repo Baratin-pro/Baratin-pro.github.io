@@ -1,0 +1,16 @@
+/**************** Tête de la page ****************/
+.omf-topbar{
+    grid-row: omf-topbar;
+    grid-column: 1;
+    background: $background-color;
+    a{
+        text-decoration: none;
+        h1{
+            color: $primary-color;
+            font-size: map-get($font-size, topbar_title);
+            text-align: center;
+            padding: 20px 0;
+            
+        }
+    } 
+}
