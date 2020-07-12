@@ -1,0 +1,75 @@
+.portfolio-diapo{
+    position: relative;
+    @include tablet-computer{
+        margin: 0 auto;
+        width: 70%;
+        height: 780px;
+    }
+    border-radius: 20px;
+    margin-top: 20px;
+    img{
+        margin-top: 20px;
+        border-radius: 20px;
+        box-shadow:2px 2px 2px gray,
+        -1px -1px 2px white;
+    }
+    p{
+        position: absolute;
+        font-size: 1.2em;
+        color:rgb(0, 100, 240);
+        text-shadow: 2px 2px  rgb(0, 0, 0);
+        
+        @include tablet-computer{
+            font-size: 4em;
+        }
+    }
+    &--bac p{
+        bottom: 0;
+        transform: translate(50%, -40%);
+    }
+    &--armee p{
+        top: 0;
+        right: 0;
+        transform: translate(-2%, 4%);
+    }
+    &--golf{
+        img{
+            height: 780px;
+            width: 100%;
+        }
+        p{
+            top: 0;
+            right: 0;
+        
+            &:first-of-type{
+                top: 0;
+                right: 0;
+                transform: translate(-5%, 150%);
+            }
+            &:last-of-type{
+                transform: translate(-25%,250%);
+            }
+        }
+    }
+    &--dev{
+        img{
+           height: 780px; 
+           width: 100%;
+        }
+        p{
+            top: 0;
+            left: 0;
+            transform: translate(5%, 20%);
+        }
+        
+    }
+    &__bottomSlide{
+        display: flex;
+        justify-content: space-between;
+        img{
+            width: 30%;
+        }
+    }
+}
+
+

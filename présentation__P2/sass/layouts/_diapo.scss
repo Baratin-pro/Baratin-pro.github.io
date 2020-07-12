@@ -1,0 +1,18 @@
+.container{
+    max-width: 760px;
+    overflow: hidden;
+    margin: 0px auto;
+}
+.diapo{
+    width: 454.41%;
+    height: 0;
+    padding-top: 75%;
+    background-color: #EDEDED;
+    background-image: url("../../img/diapo2.jpg");
+    background-size: contain;
+    animation: slide 10s linear infinite;
+}    
+@keyframes slide{
+    0%{transform: translate(0,0);}
+    100%{transform: translate(-75%,0);}
+}

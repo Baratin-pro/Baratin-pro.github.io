@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Devonshire&family=Itim&family=DM+Serif+Text&family=Croissant+One&family=Dancing+Script:wght@500&family=Nanum+Pen+Script&family=Kaushan+Script&family=Lato:wght@400&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/2220ecbea4.js" crossorigin="anonymous"></script>
+    
+        <title>portfolio: Structure interface</title>
+        
+        
+        <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="stylesheet" href="./public/css/prefixed/style.css">
+    </head>
+    <body class="portfolio">
+        <header class="portfolio-topbar">
+            <nav class="portfolio-topbar__nav">
+                <a href="maquette_interface.html"><i class="fas fa-chevron-left" aria-hidden="true"></i></a>
+                <div class="portfolio-topbar__nav__title">
+                    <a href="index.html"><i class="fas fa-home" aria-hidden="true"></i></a>
+                    <a href="bac_parcours.html"><i class="fas fa-road" aria-hidden="true"></i></a>
+                    <a href="base_seo.html"><i class="fas fa-eye" aria-hidden="true"></i></a>
+                    <a href="maquette_interface.html"><h1>L'interface</h1></a>
+                </div>
+                <a href="elements_interface.html"><i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+            </nav>
+        </header>
+        <main class="portfolio-interface portfolio-interface--structure">
+            <h2>Création d'une page responsive</h2>
+            <section class="portfolio-interface__section">
+                <article class="portfolio-interface__section__container">
+                    <h3>Avec flex</h3>
+                    <div class="portfolio-interface__section__container__flex">
+                        <div class="flex__header">
+                            <div class="flex__header__title">
+                                <h4>Titre</h4>
+                            </div>
+                            <div class="flex__header__nav">
+                                <a href="#">Accueil</a>
+                                <a href="#">A propos</a>
+                                <a href="#">Contact</a>
+                            </div>
+                        </div>
+                        <div class="flex__body">
+                            <article class="flex__body__article">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident omnis, laboriosam labore neque eum necessitatibus aliquam animi et nam dicta rerum maxime optio quod expedita nostrum hic aperiam quo ducimus.
+                            </article>
+                            <article class="flex__body__article">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore iusto adipisci deserunt minima officia nam quaerat, et numquam porro sequi quo fuga aliquid quod hic. Expedita temporibus corrupti iste fuga!
+                            </article>
+                        </div>
+                        <div class="flex__footer">
+                                <p>footer</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="portfolio-interface__section__container">
+                    <h3>Avec grid</h3>
+                    <div class="portfolio-interface__section__container__grid">
+                        <div class="grid__logo">Logo</div>
+                        <div class="grid__header">Header</div>
+                        <div class="grid__nav">Navigation</div>
+                        <div class="grid__article grid__article--1">Article 1</div>
+                        <div class="grid__article grid__article--2">Article 2</div>
+                        <div class="grid__article grid__article--3">Article 3</div>
+                        <div class="grid__article grid__article--4">Article 4</div>
+                        <div class="grid__article grid__article--5">Article 5</div>
+                        <div class="grid__article grid__article--6">Article 6</div>
+                        <div class="grid__article grid__article--7">Article 7</div>
+                        <div class="grid__article grid__article--8">Article 8</div>
+                        <div class="grid__article grid__article--9">Article 9</div>
+                        <div class="grid__article grid__article--10">Article 10</div>
+                        <div class="grid__sidebar">Sidebar</div>
+                        <div class="grid__footer"> footer</div>
+                    </div>
+                </article>
+                <article class="portfolio-interface__section__container">
+                    <h3>Avec grid et flex</h3>
+                    <div class="portfolio-interface__section__container__flexGrid">
+                        <div class="grid__header">Header</div>
+                        <div class="grid__nav">Navigation</div>
+                        <div class="grid__article grid__article--1">Article 1</div>
+                        <div class="grid__article grid__article--2">Article 2</div>
+                        <div class="grid__article grid__article--3">Article 3</div>
+                        <div class="grid__article grid__article--4">Article 4</div>
+                        <div class="flexGrid__footer">
+                            <p>footer</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>

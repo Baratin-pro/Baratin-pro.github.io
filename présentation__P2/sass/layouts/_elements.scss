@@ -1,0 +1,75 @@
+.portfolio-interface__section{
+    h3{
+        background: rgb(0, 0, 0);
+        color: rgba(255, 255, 255, .9);
+        padding: 12px 2px;
+        margin: 20px 10px;
+        border-radius: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        font-size: 1.4em;
+        margin: 10px;
+        li{
+            margin: 7px;
+            a{
+                text-decoration: none;
+                display: inline-block;
+                color: white;
+                background-color: rgb(77, 5, 5);
+                padding: 8px;
+                border-radius: 5px;
+                border: 2px solid  rgba(77, 5, 5, 0.63);
+                box-shadow:2px 2px 2px gray,
+            -1px -1px 2px rgb(121, 102, 102);
+                &:hover{
+                    transform: scale(1.2) translate(10%,0%);
+                    color: rgb(1, 145, 42);
+                    
+                }
+            }
+        }
+        @include tablet-computer{
+            flex-direction: row;
+        }
+    }
+    &__media{
+        display: flex;
+        flex-direction: column;
+        @include tablet-computer{
+            flex-direction: row;
+        }
+
+
+        &__element{
+        border: thin #c0c0c0 solid;
+        display: flex;
+        flex-flow: column;
+        padding: 5px;
+        max-width: 300px;
+        margin: 15px 0;
+        @include tablet-computer{
+            margin: auto;
+        }
+        img {
+            max-width: 220px;
+            max-height: 150px;
+        }
+        figcaption, legend {
+            background-color: #222;
+            color: #fff;
+            font: italic smaller sans-serif;
+            padding: 3px;
+            text-align: center;
+        }
+        audio{
+            width: 200px;
+        }
+        }
+        
+    }  
+}

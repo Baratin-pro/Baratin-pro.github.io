@@ -1,0 +1,75 @@
+.form__grid{
+    display: grid;
+    width: 100%;
+    grid-gap: 20px;
+    margin: 0 20px;
+    grid-template-areas:    "nom" 
+                            "prenom"
+                            " age" 
+                            "sex"
+                            "mail"
+                            "mdp"  
+                            "confmdp"
+                            "commentaire"
+                            "confirmation";
+    @include tablet-computer{
+        grid-template-rows: repeat(6,50px);
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas:"nom prenom"
+                            " age sex"
+                            "mail ."
+                            "mdp confmdp"
+                            "commentaire commentaire"
+                            "confirmation confirmation ";
+    }
+    &__champ{
+        &--nom{
+            grid-area: nom;
+        }
+        &--prenom{
+            grid-area: prenom;
+        }
+        &--age{
+            grid-area: age;
+        }
+        &--sex{
+            grid-area: sex;
+        }
+        &--mail{
+            grid-area: mail;
+        }
+        &--commentaire{
+            grid-area: commentaire;
+            display: flex;
+            label{
+                padding-top: 8px;
+                margin-right: 2px;
+            }
+        }
+        &--mdp{
+            grid-area: mdp;
+        }
+        &--confmdp{
+            grid-area: confmdp;
+        }
+        &--confirmation{
+            grid-area: confirmation;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            input{
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 1em;
+                padding: 5px;
+                margin: 5px;
+                @include tablet-computer{
+                padding: 20px;
+                border-radius: 20px;
+                margin: 10px;
+                transform: translate(0%,-30%);
+                }
+            }
+        }
+    }
+}

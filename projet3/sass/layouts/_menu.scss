@@ -9,4 +9,69 @@
 
 .omf-card{
     grid-row: omf-next__container;
+    margin: 30px 40px;
+    &--note{
+        background: rgb(252, 223, 219);
+    }
+    &__header{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &--note{
+            h2{
+                color: rgb(60, 18, 24);
+            font-size: map-get($font-size, note_icon);
+            }
+            .note__icon{
+                background-clip: text;
+                background-image: linear-gradient(.25turn,rgb(241, 88, 97), rgb(247, 143, 106) );
+                font-size: map-get($font-size, note_icon);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+        }
+    }
+    &__body{
+        margin: 0 5%;
+        ul{
+            margin-bottom: 60px;
+            li{
+            display: flex;
+            justify-content: space-between;
+             }
+        }
+        &__subtitle{
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        &__footer{
+
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            &--note{
+                color: rgb(60, 18, 24);
+                .note__icon{
+                    background-clip: text;
+                    background-image: linear-gradient(.25turn,rgb(241, 88, 97), rgb(247, 143, 106) );
+                    font-size: map-get($font-size, note_icon);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                }
+                h2{
+                margin-left: 5px;
+                font-size: map-get($font-size, note_p);
+                }
+            }   
+        }
+        &--note{
+            color: rgb(60, 18, 24);
+        }
+    }
 }
+
+

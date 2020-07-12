@@ -1,60 +1,97 @@
 /**************** Font-family ****************/
-.omf-topbar h1{
+.montserrat{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
 
-.omf-menu__card--note h3, .omf-card__header--note h2, .omf-card__body__footer h2{
+.devonshire{
     font-family: 'Devonshire', cursive;
     font-weight: 300;
 }
 
-.omf-menu__card--note p{
+.itim{
     font-family: 'Itim', cursive;
     font-weight: 400;
     font-style: italic;
 }
 
-.omf-menu__card--chic h3{
+.portfolio-seo__container h3, .croissant_one{
     font-family: 'Croissant One', cursive;
     font-weight: 400;
 }
 
-.omf-menu__card--chic p{
+.dm_serif_text{
     font-family: 'DM Serif Text', serif;
     font-weight: 400;
 }
 
-.omf-menu__card--delice h3{
+.dancing_script{
     font-family: 'Dancing Script', cursive;
     font-weight: 500;
 }
 
-.omf-menu__card--delice p, .omf-menu__card--palette p{
+.nanum_pen_script{
     font-family: 'Nanum Pen Script', cursive;
     font-weight: 400;
     font-style: italic;
 }
 
-.omf-menu__card--palette h3{
+.kaushan_script{
     font-family: 'Kaushan Script', cursive;
     font-weight: 400;
 }
 
-.omf-next h2, .omf-bottombar h2{
+.lato{
     font-family: 'Lato', sans-serif;
     font-weight: 400;
 }
 
-.omf-title h2{
+.roboto{
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
 }
 
-.omf-card__body--note{
+.kalam{
     font-family: "kalam", sans-serif;
     font-weight: 400;
     ul li p:last-child, .omf-card__body__subtitle h3{
     font-weight: 700;
     }
+}
+.portfolio-topbar__nav h1, .portfolio-diapo p, .portfolio-seo h2, .portfolio-interface h2{
+    font-family: 'Kalam', cursive;
+}
+
+
+
+.eater{
+    font-family: 'Eater', cursive;
+}
+
+.special_elite{
+    font-family: 'Special Elite', cursive;
+}
+
+.press_start{
+    font-family: 'Press Start 2P', cursive;
+}
+
+.pinyon_script{
+    font-family: 'Pinyon Script', cursive;
+}
+
+.fredericka{
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.cookie{
+    font-family: 'Cookie', cursive;
+}
+
+.cabin_sketch{
+    font-family: 'Cabin Sketch', cursive;
+}
+
+.rock_salt{
+    font-family: 'Rock Salt', cursive;
 }

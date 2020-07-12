@@ -1,0 +1,17 @@
+@mixin tablet-computer {
+    @media only screen and (min-width: map-get($breakpoints , tablet)){
+        @content;
+    };
+}
+
+@mixin computer-only {
+    @media only screen and (min-width: map-get($breakpoints , computer)){
+        @content;
+    };
+}
+
+@mixin big-computer {
+    @media only screen and (min-width: map-get($breakpoints , big_computer)){
+        @content;
+    };
+}
