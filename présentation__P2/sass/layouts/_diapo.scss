@@ -1,18 +1,166 @@
-.container{
-    max-width: 760px;
-    overflow: hidden;
-    margin: 0px auto;
+.portfolio-interface--diapo{
+    background-color: rgba(0, 0, 0, 0);
+
+    .container{
+        max-width: 760px;
+        overflow: hidden;
+        margin: 20px auto;
+    }
+    .diapo{
+        width: 454.41%;
+        height: 0;
+        padding-top: 75%;
+        background-color: #EDEDED;
+        background-image: url("../../../img/diapo2.jpg");
+        background-size: contain;
+        animation: slide 15s linear infinite;
+    }    
+    @keyframes slide{
+        0%{transform: translate(0,0);}
+        100%{transform: translate(-75%,0);}
+    }
 }
-.diapo{
-    width: 454.41%;
-    height: 0;
-    padding-top: 75%;
-    background-color: #EDEDED;
-    background-image: url("../../../img/diapo2.jpg");
-    background-size: contain;
-    animation: slide 10s linear infinite;
-}    
-@keyframes slide{
-    0%{transform: translate(0,0);}
-    100%{transform: translate(-75%,0);}
+
+.card{
+    position: relative;
+    margin: 20px auto;
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    overflow: hidden;
+    @include tablet-computer{
+        width: 50%;
+    }
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    &:hover{
+        animation: animation-color 3s infinite;
+    }
+    &:hover img{
+        opacity: .6;
+        transform: scale(1.2);
+    }
+    &:hover &__thumb{
+        height: 90px;
+    }
+    &:hover &__body{
+        height: 100px + 125px;
+        @include tablet-computer{
+            height: 60px + 145px;
+        }
+    }
+    &:hover &__description{
+        opacity: 1;
+    }
+    &__date{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        background-color: rgb(226, 81, 13);
+        border-radius: 50%;
+        color: rgb(255, 255, 255);
+        line-height: 10px;
+        font-weight: 700;
+        text-align: center;
+        padding-top: 10px;
+        &__day{
+            display: block;
+            font-size: 14px;
+        }
+        &__month{
+            display: block;
+            font-size: 10px;
+            text-transform: uppercase;
+        } 
+    }
+    &__thumb{
+        height: 125px;
+        @include tablet-computer{
+            height: 235px;
+        }
+        background-color: rgb(0, 0, 0);
+        overflow: hidden;
+        border-radius: 10px 10px 0 0;
+        transition: height 3s;
+        img{
+            border-radius: 10px 10px 0 0;
+            display: block;
+            opacity: 1;
+            transition: opacity 3s, transform 5s;
+            transform: scale(1);
+        }
+    }
+    &__body{
+        position: relative;
+        padding: 20px;
+        height: 100px;
+        @include tablet-computer{
+            height: 60px;
+        }
+        transition: height 3s;
+        &__category{
+            position: absolute;
+            left: 0;
+            top: -25px;
+            height: 25px;
+            padding: 0 15px;
+            background-color: rgb(226, 81, 13);
+            color: rgb(255, 255, 255);
+            font-size: 11px;
+            line-height: 25px;
+            text-transform: uppercase;
+        }
+        &__title{
+            padding-bottom: 10px;
+            h4{
+            color: rgb(0, 0, 0);
+            font-size: 1.2em;
+            font-weight: 700;
+            @include tablet-computer {
+                font-size: 1.4em;
+            }
+            }
+        }
+    }
+    &__description{
+            color: rgb(101, 103, 107);
+            font-size: 0.9em;
+            line-height: 22px;
+            opacity: 0;
+            transition: opacity 3s;
+        }
+}
+
+@keyframes animation-color {
+    0%{
+        box-shadow: 0 0 50px rgba(60, 223, 245, 0.8);
+    }
+    20%{
+        box-shadow: 0 0 70px rgba(25, 186, 207, 0.8);
+    }
+    40%{
+        box-shadow: 0 0 90px rgba(13, 120, 134, 0.8);
+    }
+    60%{
+        box-shadow: 0 0 90px rgba(102, 123, 218, 0.8);
+    }
+    80%{
+        box-shadow: 0 0 70px rgba(37, 44, 145, 0.8);
+    }
+    100%{
+        box-shadow: 0 0 50px rgba(25, 186, 207, 0.8);
+    }
+}
+
+@keyframes opacity__description {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
