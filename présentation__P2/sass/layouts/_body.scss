@@ -1,6 +1,10 @@
 .portfolio-diapo{
     position: relative;
     @include tablet-computer{
+        width: 95%;
+        margin-left: 20px;
+    }
+    @include big_computer{
         margin: 0 auto;
         width: 70%;
         height: 780px;
@@ -20,44 +24,67 @@
         text-shadow: 2px 2px  rgb(0, 0, 0);
         
         @include tablet-computer{
+            font-size: 2em;
+        }
+        @include big_computer{
+            font-size: 3em;
+        }
+        @include bigbig_computer{
             font-size: 4em;
         }
     }
     &--bac p{
         bottom: 0;
         transform: translate(50%, -40%);
+        @include big_computer{
+            bottom: 200px;
+            transform: translate(50%, -90%);
+        }
+        @include bigbig_computer{
+            bottom: 0;
+            transform: translate(50%, -40%);
+        }
     }
     &--armee p{
-        top: 0;
-        right: 0;
-        transform: translate(-2%, 4%);
+        top: 14px;
+        right: 10px;
+        @include tablet-computer{
+            top: 12px;
+        }
+        @include big_computer{
+            top: 5px;
+        }
     }
     &--golf{
         img{
+            @include bigbig_computer{
             height: 780px;
             width: 100%;
-        }
-        p{
-            top: 0;
-            right: 0;
-        
-            &:first-of-type{
-                top: 0;
-                right: 0;
-                transform: translate(-5%, 150%);
             }
-            &:last-of-type{
-                transform: translate(-25%,250%);
+        }
+        &__description{
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            p{
+                position: static;
+                display: block;
+            }
+            @include tablet-computer{
+                top: 120px;
+                right: 30px;
             }
         }
     }
     &--dev{
         img{
-           height: 780px; 
-           width: 100%;
+            @include bigbig_computer{
+            height: 780px;
+            width: 100%;
+            }
         }
         p{
-            top: 0;
+            top: 20px;
             left: 0;
             transform: translate(5%, 20%);
         }

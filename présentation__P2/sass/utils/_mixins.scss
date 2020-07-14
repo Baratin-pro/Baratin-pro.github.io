@@ -15,3 +15,8 @@
         @content;
     };
 }
+@mixin bigbig-computer {
+    @media only screen and (min-width: map-get($breakpoints , bigbig_computer)){
+        @content;
+    };
+}
