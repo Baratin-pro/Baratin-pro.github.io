@@ -49,45 +49,47 @@
             <h2>Les formulaires</h2>
             <section class="portfolio-interface__section">
                 <h3>Exemple pour une inscription</h3>
-                <form class="form__grid" method="post" action="form.php">
-                    <div class="form__grid__champ form__grid__champ--nom">
-                        <label for="nom">Nom </label>
-                        <input type="text" id="nom" name="nom" minlength="2" maxlength="25" required>
-                    </div>
-                    <div class="form__grid__champ form__grid__champ--prenom">
-                        <label for="prenom">Prénom </label>
-                        <input type="text" id="prenom" name="prenom" minlength="2" maxlength="25" required>
-                    </div>
-                    <div class="form__grid__champ form__grid__champ--age">
-                        <label for="age">Age :</label>
-                        <input type="number" id="age" name="age" min="16" max="99">
-                    </div>
-                    <div class="form__grid__champ form__grid__champ--sex">
-                        <input type="radio" id="h" name="sexe" value="homme">
-                        <label for="h">Homme</label>
-                        <input type="radio" id="f" name="sexe" value="femme">
-                        <label for="f">Femme</label>
-                    </div>
-                    <div class="form__grid__champ form__grid__champ--mail">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form__grid__champ form__grid__champ--commentaire">
-                        <label for="comment">Commentaire</label>
-                        <textarea name="comment" maxlength="500"></textarea>
-                    </div>
-                    <div class="form__grid__champ form__grid__champ--mdp">
-                        <label for="password">Mot de passe</label>
-                        <input type="password" name="password" id="password" minlength="8" required>
-                    </div>
-                    <div class="form__grid__champ form__grid__champ--confmdp">
-                        <label for="confpassword">Confirmation</label>
-                        <input type="password" name="confpassword" id="confpassword" minlength="8" required>
-                    </div>
-                    <div class="form__grid__champ form__grid__champ--confirmation">
-                        <input type="submit" value="Envoyer">
-                    </div>
-                  </form>    
+                <div class="portfolio-interface__section__form">
+                    <form class="form__grid" method="post" action="form.php">
+                        <div class="form__grid__champ form__grid__champ--nom">
+                            <label for="nom">Nom </label>
+                            <input type="text" id="nom" name="nom" minlength="2" maxlength="25" required>
+                        </div>
+                        <div class="form__grid__champ form__grid__champ--prenom">
+                            <label for="prenom">Prénom </label>
+                            <input type="text" id="prenom" name="prenom" minlength="2" maxlength="25" required>
+                        </div>
+                        <div class="form__grid__champ form__grid__champ--age">
+                            <label for="age">Age </label>
+                            <input type="number" id="age" name="age" min="16" max="99">
+                        </div>
+                        <div class="form__grid__champ form__grid__champ--sex">
+                            <input type="radio" id="h" name="sexe" value="homme">
+                            <label for="h">Homme</label>
+                            <input type="radio" id="f" name="sexe" value="femme">
+                            <label for="f">Femme</label>
+                        </div>
+                        <div class="form__grid__champ form__grid__champ--mail">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form__grid__champ form__grid__champ--commentaire">
+                            <label for="comment">Commentaire</label>
+                            <textarea name="comment" maxlength="500"></textarea>
+                        </div>
+                        <div class="form__grid__champ form__grid__champ--mdp">
+                            <label for="password">Mot de passe</label>
+                            <input type="password" name="password" id="password" minlength="8" required>
+                        </div>
+                        <div class="form__grid__champ form__grid__champ--confmdp">
+                            <label for="confpassword">Confirmation</label>
+                            <input type="password" name="confpassword" id="confpassword" minlength="8" required>
+                        </div>
+                        <div class="form__grid__champ form__grid__champ--confirmation">
+                            <input type="submit" value="Envoyer">
+                        </div>
+                      </form> 
+                </div>   
             
             </section>
         </main>
