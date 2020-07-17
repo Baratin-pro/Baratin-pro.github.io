@@ -1,6 +1,9 @@
 .portfolio-interface{
     position: relative;
         background: rgba(255, 255, 255, .9);
+        &--structure{
+            padding: 20px 5px;
+        }
         h2{
             text-align: center;
             font-size: 1.5em;
@@ -205,5 +208,53 @@
         height: 100px;
         text-align: center;
         line-height: 56px;
+    }
+}
+
+.letter{
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 1.3em;
+    @include tablet-computer{
+        padding: 40px;
+    }
+    &-topletter, &-sender{
+        p{
+        font-size: 0.8em;
+          line-height: 1.5em; 
+          
+        }
+    }
+    &-sender{
+        text-align: right;
+        :last-child{
+            font-style: italic;
+        }
+    }
+    &-object{
+        margin: 20px 0;
+        font-weight: 700;
+        p{
+            padding: 5px 0;
+        }
+        &__underText{
+            border-bottom: 2px solid black ;
+        }
+    }
+    &-content{
+        p{
+            margin: 10px auto;
+            text-align: justify;
+        }
+        :first-child{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        :nth-child(2){
+            text-indent: 3em;
+        }
+        :last-child{
+            text-align: right;
+        }
     }
 }
