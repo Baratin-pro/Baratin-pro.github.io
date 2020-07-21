@@ -4,28 +4,28 @@
     font-weight: 700;
 }
 
-.omf-menu__card--note h3, .omf-card__header--note h2, .omf-card__body__footer h2{
+.omf-menu__card--note h3, .omf-card--note h2, .omf-card__body__footer h2{
     font-family: 'Devonshire', cursive;
     font-weight: 300;
 }
 
-.omf-menu__card--note p{
+.omf-menu__card--note p, .omf-card--mentions p{
     font-family: 'Itim', cursive;
     font-weight: 400;
     font-style: italic;
 }
 
-.omf-menu__card--chic h3{
+.omf-menu__card--chic h3, .omf-card--chic h2{
     font-family: 'Croissant One', cursive;
     font-weight: 400;
 }
 
-.omf-menu__card--chic p{
+.omf-menu__card--chic p, .omf-card--chic h3{
     font-family: 'DM Serif Text', serif;
     font-weight: 400;
 }
 
-.omf-menu__card--delice h3{
+.omf-menu__card--delice h3, .omf-card--delice h2{
     font-family: 'Dancing Script', cursive;
     font-weight: 500;
 }
@@ -36,7 +36,7 @@
     font-style: italic;
 }
 
-.omf-menu__card--palette h3{
+.omf-menu__card--palette h3, , .omf-card--palette h2{
     font-family: 'Kaushan Script', cursive;
     font-weight: 400;
 }
@@ -51,10 +51,13 @@
     font-weight: 500;
 }
 
-.omf-card__body--note{
+.omf-card--note, .omf-card--delice, .omf-card--palette,, .omf-card--mentions h3{
     font-family: "kalam", sans-serif;
     font-weight: 400;
+    
+}
+.omf-card--note{
     ul li p:last-child, .omf-card__body__subtitle h3{
-    font-weight: 700;
-    }
+        font-weight: 700;
+        }
 }

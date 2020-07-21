@@ -1,75 +1,240 @@
 .omf-title{
     grid-row: omf-menu;
-    display: flex;
-    justify-content: center;
-    margin: 1em 0 0.5em;
-
-    font-size: 1.5em;
+    text-align: center;
+    margin-top: 1em;
+    font-size: 1.6em;
 }
 
 .omf-card{
     grid-row: omf-next__container;
-    margin: 30px 40px;
-    &--note{
-        background: rgb(252, 223, 219);
+    margin: 20px;
+    box-shadow: 0 0 15px rgba(175, 175, 175, 0.7);
+    h2, .note__icon{
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
     }
+   
     &__header{
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        &--note{
-            h2{
-                color: rgb(60, 18, 24);
-            font-size: map-get($font-size, note_icon);
-            }
-            .note__icon{
-                background-clip: text;
-                background-image: linear-gradient(.25turn,rgb(241, 88, 97), rgb(247, 143, 106) );
-                font-size: map-get($font-size, note_icon);
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
-            }
-        }
+        margin: 70px 0;
+        text-align: center;
     }
     &__body{
         margin: 0 5%;
+        line-height: 2em; 
         ul{
             margin-bottom: 60px;
             li{
+                :nth-child(even){
+                margin-left: 20px;
+            }
             display: flex;
             justify-content: space-between;
-             }
+            margin: 0 10%;
+            font-size: 1.1em;
+            }
         }
         &__subtitle{
-            display: flex;
-            justify-content: center;
             margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            h3{
+                font-size: 1.4em;
+                &::after{
+                    display: block;
+                    content: '';
+                    bottom: 0;
+                    left: 0;
+                    width: 0%;
+                    height: 2px;
+                    transition: width 2s; 
+                }&:hover::after{
+                    transition: width 2s;
+                    width: 100%;
+                }
+            }
+            img{
+                width: 35%;
+                height: 30px;
+            }
         }
         &__footer{
-
-            display: flex;
-            justify-content: center;
-            align-items: baseline;
-            &--note{
+            text-align: center;
+        }
+    }
+    @include tablet-computer{
+        padding: 20px;
+        margin: 10px;
+    }
+    @include computer-only{
+        margin: 10px auto;
+        width: 900px;
+    }
+    &--note{
+        color: rgb(60, 18, 24);
+        margin-bottom: 40px;
+        background: rgb(252, 223, 219);
+        .omf-card__header{
+            margin: 50px 0 20px;
+            h2{
+                color: rgb(60, 18, 24);
+                font-size: map-get($font-size, note_icon);
+            }
+            .note__icon{
+                background-image: linear-gradient(.25turn,rgb(241, 88, 97), rgb(247, 143, 106));
+                font-size: 2.6em;
+            }
+        }
+            h3{
+                &::after{
+                    background-color: black;
+                }
+            }
+            ul li{
+                margin: 0;
+            }
+            .omf-card__body__footer{
                 color: rgb(60, 18, 24);
                 .note__icon{
                     background-clip: text;
                     background-image: linear-gradient(.25turn,rgb(241, 88, 97), rgb(247, 143, 106) );
                     font-size: map-get($font-size, note_icon);
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    color: transparent;
                 }
                 h2{
+                color: rgb(60, 18, 24) ;
                 margin-left: 5px;
                 font-size: map-get($font-size, note_p);
+                display: inline;
                 }
-            }   
+            }
+    }
+    &--chic{
+        background: rgb(255, 245, 254);
+        .omf-card__header{
+            h2{
+                font-size: 1.6em;
+                background-image: linear-gradient(.25turn,rgb(216, 133, 46) 35%, rgb(143, 90, 255), rgb(110, 76, 204)); 
+                @include tablet-computer{
+                    font-size: 2.6em;
+                }
+            }
         }
-        &--note{
-            color: rgb(60, 18, 24);
+        h3{
+            font-size: 1.2em;
+        }
+        &__orange{
+            color: rgb(198, 116, 18); 
+            &__under{
+                &::after{
+                    background-color: rgb(198, 116, 18);
+                }
+            } 
+        }
+        &__purple{
+            color: rgb(165, 103, 153);
+            &__under{
+                &::after{
+                    background-color: rgb(165, 103, 153);
+                }
+            } 
+        }
+        &__blue{
+            color: rgb(110, 76, 204);
+            &__under{
+                &::after{
+                    background-color: rgb(110, 76, 204);
+                }
+            } 
+        }
+    }
+    &--delice{
+        background-color: rgb(237, 239, 239);
+        .omf-card__header{
+            h2{
+                font-size: 2.2em;
+                background-image: linear-gradient(.25turn,rgb(33, 64, 223) 15%, rgb(84, 171, 251) );
+                @include tablet-computer{
+                    font-size: 4.2em;
+                }
+            }
+        }
+        h3{
+            font-size: 1.2em;
+        }
+        &__under{
+            &--darkblue{
+                &::after{
+                    background-color: rgb(2, 40, 221);
+                }
+            }
+            &--blue{
+                &::after{
+                    background-color: rgb(6, 112, 243);
+                }
+            }
+            &--lightblue{
+                &::after{
+                    background-color: rgb(34, 157, 249);
+                }
+            }
+        }
+    }
+    &--palette{
+        background: rgb(253, 255, 253);
+        .omf-card__header{
+            h2{
+                font-size: 2.2em;
+                background-image: linear-gradient(.25turn,rgb(66, 151, 60), rgb(191, 255, 126));
+                
+                @include tablet-computer{
+                    font-size: 4.2em;
+                }
+            }
+        }
+        h3{
+            &::after{
+                background:linear-gradient(.25turn,rgb(66, 151, 60), rgb(191, 255, 126));
+            }
+        }
+    }
+    &--mentions{
+        background-color: rgba(197, 195, 195,.3);
+        a{
+            text-decoration: none;
+            color: $primary-color;
+            font-weight: 700;
+            background-color: $background-color;
+            padding: .3em;
+            
+        }
+        .omf-card__header{
+            h2{
+                font-size: 1.6em;
+                background-image: linear-gradient(.25turn,black 10%, rgb(195, 195, 195) 85%, rgb(255, 255, 255)); 
+                @include tablet-computer{
+                    font-size: 2.6em;
+                }
+            }
+        }
+        h3{
+            font-size: 1.2em;
+            @include tablet-computer{
+                font-size: 1.4em;
+            }
+            &::after{
+                background: linear-gradient(.25turn,black 10%, rgb(195, 195, 195) 85%, rgb(255, 255, 255));
+            }
+        }
+        .omf-card__body__contact{ 
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            width: 50%;
+            @include tablet-computer{
+                width: 40%;
+            }
         }
     }
 }

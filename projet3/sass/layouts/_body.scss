@@ -42,7 +42,6 @@
                 text-transform: uppercase;
                 }
             .note__icon{
-                background-clip: text;
                 background-image: linear-gradient(.25turn,rgb(241, 88, 97), rgb(247, 143, 106) );
                 font-size: map-get($font-size, note_icon);
                 background-clip: text;
@@ -55,7 +54,6 @@
             background: rgb(255, 245, 254);
             h3{
                 font-size: map-get($font-size, chic_h3);
-                background-clip: text;
                 background-image: linear-gradient(.25turn,rgb(216, 133, 46), rgb(144, 91, 253) );
                 background-clip: text;
                 -webkit-background-clip: text;
@@ -71,7 +69,6 @@
             background: rgb(249, 249, 249);
             h3{
                 font-size: map-get($font-size, delice_h3);
-                background-clip: text;
                 background-image: linear-gradient(.25turn,rgb(33, 64, 223), rgb(23, 137, 249) );
                 background-clip: text;
                 -webkit-background-clip: text;
@@ -87,7 +84,6 @@
             background: rgb(253, 255, 253);
             h3{
                 font-size: map-get($font-size, palette_h3);
-                background-clip: text;
                 background-image: linear-gradient(.25turn,rgb(66, 151, 60), rgb(191, 255, 126));
                 background-clip: text;
                 -webkit-background-clip: text;

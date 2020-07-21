@@ -21,9 +21,5 @@
             animation-iteration-count: infinite;
         }
     }
-    @include computer-only{
-        margin: 0 auto;
-        width: 900px;
-    }
 }
     
