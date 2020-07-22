@@ -456,7 +456,7 @@ td:not([align]), th:not([align]) {
   font-size: 2.1em;
 }
 .omf-card--note h3::after {
-  background-color: black;
+  background-color: #3c1218;
 }
 .omf-card--note ul li {
   margin: 0;
