@@ -14,7 +14,7 @@
     a{
         margin: 10px;
         color: $primary-color;
-        font-size: map-get($font-size, bottom_a);
+        font-size: 1.3em;
         text-decoration: none;
         &:hover{
             animation: wiggle 0.5s;

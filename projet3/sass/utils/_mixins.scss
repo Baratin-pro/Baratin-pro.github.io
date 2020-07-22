@@ -10,6 +10,12 @@
         @content;
     };
 }
+@mixin background-clip {
+    -webkit-background-clip: text;
+    color: transparent;
+    @content;
+    
+}
 
 
 @keyframes load {

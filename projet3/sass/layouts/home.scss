@@ -28,66 +28,58 @@
         }
         h3{
             padding-bottom: 10px;
+            @include background-clip;
             
         }
         &--note{
             grid-area: note;
-            background: rgb(252, 223, 219);
+            background: $note-background__colors;
             h3{
-                font-size: map-get($font-size, note_h3)
+                font-size: 1.3em;
+                color: rgb(0, 0, 0);
             }
             p{
-                color: rgb(60, 18, 24);
-                font-size: map-get($font-size, note_p);
+                color: $note-colors;
+                font-size: 1.8em;
                 text-transform: uppercase;
                 }
             .note__icon{
-                background-image: linear-gradient(.25turn,rgb(241, 88, 97), rgb(247, 143, 106) );
-                font-size: map-get($font-size, note_icon);
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
+                background-image: $note-icon__background__image;
+                font-size: 2.1em;
+                @include background-clip;
             }
         }
         &--chic{
             grid-area: chic;
-            background: rgb(255, 245, 254);
+            background: $chic-background__colors;
             h3{
-                font-size: map-get($font-size, chic_h3);
-                background-image: linear-gradient(.25turn,rgb(216, 133, 46), rgb(144, 91, 253) );
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
+                font-size: 0.9em;
+                background-image: $chic-background__image;
+                
             }
             p{
-                font-size: map-get($font-size, chic_p);
+                font-size: 1.8em;
                 color: rgb(199, 116, 18);
             }
         }
         &--delice{
             grid-area: delice;
-            background: rgb(249, 249, 249);
+            background: $delice-background__colors--home;
             h3{
-                font-size: map-get($font-size, delice_h3);
-                background-image: linear-gradient(.25turn,rgb(33, 64, 223), rgb(23, 137, 249) );
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
+                font-size: 1.3em;
+                background-image: $delice-background__image;
             }
             p{ 
-                font-size: map-get($font-size, delice_p);
+                font-size: 2em;
                 color: rgb(8, 135, 251)
             }
         }
         &--palette{
             grid-area: palette;
-            background: rgb(253, 255, 253);
+            background: $palette-background__colors;
             h3{
-                font-size: map-get($font-size, palette_h3);
-                background-image: linear-gradient(.25turn,rgb(66, 151, 60), rgb(191, 255, 126));
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
+                font-size: 1.3em;
+                background-image: $palette-background__image;
             }
             p{
                 font-size: map-get($font-size, palette_p);
@@ -123,7 +115,7 @@
         align-items: center;
         h2{
             color: $primary-color;
-            font-size: map-get($font-size, next_h2);
+            font-size: 1.8em;
             text-align: center;
             padding-right: 0.2em;
         }

@@ -25,7 +25,33 @@ $font-size:(
     bottom_a : 1.3em // Font -> omf-bottombar a
 );
 
+//Menu la note enchantée
 
+$note-colors: rgb(60, 18, 24);
+$note-background__colors: rgb(252, 223, 219);
+$note-icon__background__image: linear-gradient(.25turn,rgb(241, 88, 97), rgb(247, 143, 106));
+$note-icon__size: 2.6em;
+
+//Menu le chic a la francais
+
+$chic-background__colors: rgb(255, 245, 254);
+$chic-background__image: linear-gradient(.25turn,rgb(216, 133, 46) 35%, rgb(143, 90, 255), rgb(110, 76, 204));
+
+//Menu le delice des papilles
+
+$delice-background__colors--home:rgb(249, 249, 249);
+$delice-background__colors:rgb(237, 239, 239);
+$delice-background__image:linear-gradient(.25turn,rgb(33, 64, 223) 15%, rgb(84, 171, 251));
+
+//Menu la palette du goût
+
+$palette-background__colors: rgb(253, 255, 253);
+$palette-background__image: linear-gradient(.25turn,rgb(66, 151, 60), rgb(191, 255, 126));
+
+//Page Mentions légales
+
+$mentions-background__colors: rgba(197, 195, 195,.3);
+$mentions-background__images: linear-gradient(.25turn,black 10%, rgb(195, 195, 195) 85%, rgb(255, 255, 255));
 
 $breakpoints:(
     tablet: 700px,

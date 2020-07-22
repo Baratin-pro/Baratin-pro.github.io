@@ -220,6 +220,8 @@ td:not([align]), th:not([align]) {
 }
 .omf-menu__card h3 {
   padding-bottom: 10px;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .omf-menu__card--note {
   grid-area: note;
@@ -227,6 +229,7 @@ td:not([align]), th:not([align]) {
 }
 .omf-menu__card--note h3 {
   font-size: 1.3em;
+  color: black;
 }
 .omf-menu__card--note p {
   color: #3c1218;
@@ -236,7 +239,6 @@ td:not([align]), th:not([align]) {
 .omf-menu__card--note .note__icon {
   background-image: linear-gradient(0.25turn, #f15861, #f78f6a);
   font-size: 2.1em;
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -246,10 +248,7 @@ td:not([align]), th:not([align]) {
 }
 .omf-menu__card--chic h3 {
   font-size: 0.9em;
-  background-image: linear-gradient(0.25turn, #d8852e, #905bfd);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  background-image: linear-gradient(0.25turn, #d8852e 35%, #8f5aff, #6e4ccc);
 }
 .omf-menu__card--chic p {
   font-size: 1.8em;
@@ -261,10 +260,7 @@ td:not([align]), th:not([align]) {
 }
 .omf-menu__card--delice h3 {
   font-size: 1.3em;
-  background-image: linear-gradient(0.25turn, #2140df, #1789f9);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  background-image: linear-gradient(0.25turn, #2140df 15%, #54abfb);
 }
 .omf-menu__card--delice p {
   font-size: 2em;
@@ -277,9 +273,6 @@ td:not([align]), th:not([align]) {
 .omf-menu__card--palette h3 {
   font-size: 1.3em;
   background-image: linear-gradient(0.25turn, #42973c, #bfff7e);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
 }
 .omf-menu__card--palette p {
   font-size: 2em;
@@ -381,7 +374,6 @@ td:not([align]), th:not([align]) {
   box-shadow: 0 0 15px rgba(175, 175, 175, 0.7);
 }
 .omf-card h2, .omf-card .note__icon {
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -452,6 +444,10 @@ td:not([align]), th:not([align]) {
   margin-bottom: 40px;
   background: #fcdfdb;
 }
+.omf-card--note .note__icon {
+  background-image: linear-gradient(0.25turn, #f15861, #f78f6a);
+  font-size: 2.6em;
+}
 .omf-card--note .omf-card__header {
   margin: 50px 0 20px;
 }
@@ -459,23 +455,11 @@ td:not([align]), th:not([align]) {
   color: #3c1218;
   font-size: 2.1em;
 }
-.omf-card--note .omf-card__header .note__icon {
-  background-image: linear-gradient(0.25turn, #f15861, #f78f6a);
-  font-size: 2.6em;
-}
 .omf-card--note h3::after {
   background-color: black;
 }
 .omf-card--note ul li {
   margin: 0;
-}
-.omf-card--note .omf-card__body__footer {
-  color: #3c1218;
-}
-.omf-card--note .omf-card__body__footer .note__icon {
-  background-clip: text;
-  background-image: linear-gradient(0.25turn, #f15861, #f78f6a);
-  font-size: 2.1em;
 }
 .omf-card--note .omf-card__body__footer h2 {
   color: #3c1218;
