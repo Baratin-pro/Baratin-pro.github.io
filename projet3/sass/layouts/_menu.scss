@@ -223,6 +223,7 @@
         .omf-card__body__contact{ 
             display: flex;
             justify-content: center;
+            text-align: center;
             margin: auto;
             width: 50%;
             @include tablet-computer{
