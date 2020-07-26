@@ -1,82 +1,85 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Devonshire&family=Itim&family=DM+Serif+Text&family=Croissant+One&family=Dancing+Script:wght@500&family=Nanum+Pen+Script&family=Kaushan+Script&family=Lato:wght@400&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/2220ecbea4.js" crossorigin="anonymous"></script>
-
-    <title>Ohmyfood: site de réservation et de menus en ligne</title>
-    <meta name="description" content="Réduisez votre files d'attentes, consultez votre menus à l'avance, grâce à l'application d'Ohmyfood!!">
-
-    <meta name="language" content="fr">
-    <meta name="copyright" content="Baratin"/>
-    <meta name="author" content="Baratin">
-
-    <meta property="og:title" content="Ohmyfood: site de réservation et de menus en ligne">
-    <meta property="og:site_name" content="Ohmyfood">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://baratin-pro.github.io/projet3/">
-    <meta property="og:image" content="img/ohmyfood.png">
-    <meta property="og:locale" content="fr_FR">
-    <meta property="og:description" content="Réduisez votre files d'attentes, consultez votre menus à l'avance, grâce à l'application d'Ohmyfood!!">
-
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content="Ohmyfood: site de réservation et de menus en ligne">
-    <meta name="twitter:url" content="https://baratin-pro.github.io/projet3/">
-    <meta name="twitter:description" content="Réduisez votre files d'attentes, consultez votre menus à l'avance, grâce à l'application d'Ohmyfood!!">
-    <meta name="twitter:image" content="img/ohmyfood.png">
-    <meta name="twitter:image:alt" content="Image du titre de la page Ohmyfood en jaune, sur un fond un peu près vert">
-    <link rel="canonical" href="https://baratin-pro.github.io/projet3/">
-
-    <link rel="stylesheet" href="./public/css/prefixed/style.css">
-
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-</head>
-<body class="omf">
-        <header class="omf-topbar">
-            <a href="index.html"><h1>ohmyfood</h1></a>
-        </header>
-        <main class="omf-menu">
-            <a href="menu_note.html" class="omf-menu__card omf-menu__card--note">
-                <div>
-                    <i class="fab fa-itunes-note note__icon"></i>
-                    <h3>La note enchantée</h3>
-                    <p>Menu</p>
+    <head>
+        <!--Meta-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="language" content="fr">
+        <!--Title and description-->
+        <title>Ohmyfood: site de réservation et de menus en ligne</title>
+        <meta name="description" content="Réduisez votre files d'attentes, consultez votre menus à l'avance, grâce à l'application d'Ohmyfood!!">
+        <!--Author-->
+        <meta name="copyright" content="Baratin"/>
+        <meta name="author" content="Baratin">
+        <!--Favicon-->
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+        <!--Open Graph-->
+        <meta property="og:title" content="Ohmyfood: site de réservation et de menus en ligne">
+        <meta property="og:description" content="Réduisez votre files d'attentes, consultez votre menus à l'avance, grâce à l'application d'Ohmyfood!!">
+        <meta property="og:url" content="https://baratin-pro.github.io/projet3/">
+        <meta property="og:image" content="./img/ohmyfood.png">
+        <meta property="og:site_name" content="Ohmyfood">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="fr_FR">
+        <!--Twitter-->
+        <meta name="twitter:title" content="Ohmyfood: site de réservation et de menus en ligne">
+        <meta name="twitter:description" content="Réduisez votre files d'attentes, consultez votre menus à l'avance, grâce à l'application d'Ohmyfood!!">
+        <meta name="twitter:url" content="https://baratin-pro.github.io/projet3/">
+        <meta name="twitter:image" content="./img/ohmyfood.png">
+        <meta name="twitter:image:alt" content="Image du titre de la page Ohmyfood en jaune, sur un fond un peu près vert">
+        <meta name="twitter:card" content="summary"/>
+        <!--Canonical-->
+        <link rel="canonical" href="https://baratin-pro.github.io/projet3/">
+        <!--External link-->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Devonshire&family=Itim&family=DM+Serif+Text&family=Croissant+One&family=Dancing+Script:wght@500&family=Nanum+Pen+Script&family=Kaushan+Script&family=Lato:wght@400&family=Roboto:wght@400;500&family=Kalam:wght@300;400&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/2220ecbea4.js" crossorigin="anonymous"></script>
+        <!--Internal link-->
+        <link rel="stylesheet" href="./public/css/prefixed/style.css">
+    </head>
+    <body class="omf">p
+            <header class="omf-topbar">
+                <a href="index.html"><h1>ohmyfood</h1></a>
+            </header>
+            <main class="omf-menu">
+                <a href="menu_note.html" class="omf-menu__card omf-menu__card--note">
+                    <div>
+                        <i class="fab fa-itunes-note note__icon"></i>
+                        <h3>La note enchantée</h3>
+                        <p>Menu</p>
+                    </div>
+                </a>
+                <a href="menu_chic.html" class="omf-menu__card omf-menu__card--chic">
+                    <div>
+                        <h3>Le chic à la française</h3>
+                        <p>Menu</p>
+                    </div>
+                </a>
+                <a href="menu_delice.html" class="omf-menu__card omf-menu__card--delice">
+                    <div>
+                        <h3>Le délice des papilles</h3>
+                        <p>Menu</p>
+                    </div>
+                </a>
+                <a href="menu_palette.html" class="omf-menu__card omf-menu__card--palette">
+                    <div>
+                        <h3>La palette du goût</h3>
+                        <p>Menu</p>
+                    </div>
+                </a>  
+            </main>
+            <div class="omf-next__container">
+                <div class="omf-next__container__box">
+                    <h2>Prochainement</h2>
+                    <span class="box__loading">
+                        <span class="box__loading__dot box__loading__dot--first"></span>
+                        <span class="box__loading__dot box__loading__dot--second"></span>
+                        <span class="box__loading__dot box__loading__dot--third"></span>
+                    </span>
                 </div>
-            </a>
-            <a href="menu_chic.html" class="omf-menu__card omf-menu__card--chic">
-                <div>
-                    <h3>Le chic à la française</h3>
-                    <p>Menu</p>
-                </div>
-            </a>
-            <a href="menu_delice.html" class="omf-menu__card omf-menu__card--delice">
-                <div>
-                    <h3>Le délice des papilles</h3>
-                    <p>Menu</p>
-                </div>
-            </a>
-            <a href="menu_palette.html" class="omf-menu__card omf-menu__card--palette">
-                <div>
-                    <h3>La palette du goût</h3>
-                    <p>Menu</p>
-                </div>
-            </a>  
-        </main>
-        <div class="omf-next__container">
-            <div class="omf-next__container__box">
-                <h2>Prochainement</h2>
-                <span class="box__loading">
-                    <span class="box__loading__dot box__loading__dot--first"></span>
-                    <span class="box__loading__dot box__loading__dot--second"></span>
-                    <span class="box__loading__dot box__loading__dot--third"></span>
-                </span>
             </div>
-        </div>
-        <footer class="omf-bottombar">
-            <a href="mention_legale.html">Mentions légales</a>
-            <a href="mailto:service-client@omf.fr">Contactez-nous</a>
-        </footer>
-</body>
+            <footer class="omf-bottombar">
+                <a href="mention_legale.html">Mentions légales</a>
+                <a href="mailto:service-client@omf.fr">Contactez-nous</a>
+            </footer>
+    </body>
 </html>

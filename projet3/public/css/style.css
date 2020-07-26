@@ -314,9 +314,6 @@ td:not([align]), th:not([align]) {
   text-align: center;
   padding-right: 0.2em;
 }
-.omf-next__container__box:hover .box__loading__dot {
-  display: block;
-}
 .omf-next__container__box:hover .box__loading .box__loading__dot--first {
   animation: load 1.5s 0.35s infinite;
 }
@@ -331,7 +328,6 @@ td:not([align]), th:not([align]) {
   justify-content: center;
 }
 .omf-next__container__box .box__loading__dot {
-  display: none;
   background: #fdcb46;
   width: 0.5em;
   height: 0.5em;

@@ -123,9 +123,6 @@
             padding-right: 0.2em;
         }
         &:hover .box__loading{
-            &__dot{
-                display: block;
-            }
             .box__loading__dot--first{
                 animation: load 1.5s 0.35s infinite;
             }
@@ -139,9 +136,7 @@
         .box__loading{
         display: flex;
         justify-content: center;
-        
         &__dot{
-            display: none;
             background: $primary-color;
             width: 0.5em;
             height: 0.5em;
