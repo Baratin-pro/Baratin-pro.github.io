@@ -440,7 +440,6 @@ td:not([align]), th:not([align]) {
 }
 .omf-card--note {
   color: #3c1218;
-  margin-bottom: 40px;
   background: #fcdfdb;
 }
 .omf-card--note .note__icon {
