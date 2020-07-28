@@ -205,7 +205,7 @@ td:not([align]), th:not([align]) {
   font-weight: 700;
 }
 
-.omf-menu__card--note h3, .omf-card--note h2, .omf-card__body__footer h2 {
+.omf-menu__card--note h2, .omf-card--note h2, .omf-card__body__footer h2 {
   font-family: "Devonshire", cursive;
   font-weight: 300;
 }
@@ -216,7 +216,7 @@ td:not([align]), th:not([align]) {
   font-style: italic;
 }
 
-.omf-menu__card--chic h3, .omf-card--chic h2 {
+.omf-menu__card--chic h2, .omf-card--chic h2 {
   font-family: "Croissant One", cursive;
   font-weight: 400;
 }
@@ -226,7 +226,7 @@ td:not([align]), th:not([align]) {
   font-weight: 400;
 }
 
-.omf-menu__card--delice h3, .omf-card--delice h2 {
+.omf-menu__card--delice h2, .omf-card--delice h2 {
   font-family: "Dancing Script", cursive;
   font-weight: 500;
 }
@@ -237,12 +237,12 @@ td:not([align]), th:not([align]) {
   font-style: italic;
 }
 
-.omf-menu__card--palette h3, .omf-card--palette h2 {
+.omf-menu__card--palette h2, .omf-card--palette h2 {
   font-family: "Kaushan Script", cursive;
   font-weight: 400;
 }
 
-.omf-next h2, .omf-bottombar h2 {
+.omf-next__container__box p, .omf-bottombar a {
   font-family: "Lato", sans-serif;
   font-weight: 400;
 }
@@ -338,7 +338,7 @@ td:not([align]), th:not([align]) {
   transition: transform 1.2s;
   transition: transform 1.2s, -webkit-transform 1.2s;
 }
-.omf-menu__card h3 {
+.omf-menu__card h2 {
   padding-bottom: 10px;
   -webkit-background-clip: text;
   color: transparent;
@@ -347,7 +347,7 @@ td:not([align]), th:not([align]) {
   grid-area: note;
   background: #fcdfdb;
 }
-.omf-menu__card--note h3 {
+.omf-menu__card--note h2 {
   font-size: 1.3em;
   color: black;
 }
@@ -368,7 +368,7 @@ td:not([align]), th:not([align]) {
   grid-area: chic;
   background: #fff5fe;
 }
-.omf-menu__card--chic h3 {
+.omf-menu__card--chic h2 {
   font-size: 0.9em;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(35%, #d8852e), color-stop(#8f5aff), to(#6e4ccc));
   background-image: -o-linear-gradient(left, #d8852e 35%, #8f5aff, #6e4ccc);
@@ -382,7 +382,7 @@ td:not([align]), th:not([align]) {
   grid-area: delice;
   background: #f9f9f9;
 }
-.omf-menu__card--delice h3 {
+.omf-menu__card--delice h2 {
   font-size: 1.3em;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(15%, #2140df), to(#54abfb));
   background-image: -o-linear-gradient(left, #2140df 15%, #54abfb);
@@ -396,7 +396,7 @@ td:not([align]), th:not([align]) {
   grid-area: palette;
   background: #fdfffd;
 }
-.omf-menu__card--palette h3 {
+.omf-menu__card--palette h2 {
   font-size: 1.3em;
   background-image: -webkit-gradient(linear, left top, right top, from(#42973c), to(#bfff7e));
   background-image: -o-linear-gradient(left, #42973c, #bfff7e);
@@ -434,7 +434,7 @@ td:not([align]), th:not([align]) {
       -ms-flex-align: center;
           align-items: center;
 }
-.omf-next__container__box h2 {
+.omf-next__container__box p {
   color: #fdcb46;
   font-size: 1.8em;
   text-align: center;

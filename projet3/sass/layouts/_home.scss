@@ -37,7 +37,7 @@
         div{
             transition: transform 1.2s;
         }
-        h3{
+        h2{
             padding-bottom: 10px;
             @include background-clip;
             
@@ -45,7 +45,7 @@
         &--note{
             grid-area: note;
             background: $note-background__colors;
-            h3{
+            h2{
                 font-size: 1.3em;
                 color: rgb(0, 0, 0);
             }
@@ -63,7 +63,7 @@
         &--chic{
             grid-area: chic;
             background: $chic-background__colors;
-            h3{
+            h2{
                 font-size: 0.9em;
                 background-image: $chic-background__image;
                 
@@ -76,7 +76,7 @@
         &--delice{
             grid-area: delice;
             background: $delice-background__colors--home;
-            h3{
+            h2{
                 font-size: 1.3em;
                 background-image: $delice-background__image;
             }
@@ -88,7 +88,7 @@
         &--palette{
             grid-area: palette;
             background: $palette-background__colors;
-            h3{
+            h2{
                 font-size: 1.3em;
                 background-image: $palette-background__image;
             }
@@ -116,7 +116,7 @@
         padding: 5px 20px 7px;
         display: flex;
         align-items: center;
-        h2{
+        p{
             color: $primary-color;
             font-size: 1.8em;
             text-align: center;
