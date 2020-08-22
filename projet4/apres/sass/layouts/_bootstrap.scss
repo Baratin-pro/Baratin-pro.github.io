@@ -350,10 +350,6 @@ th {
     content: "\270f"
 }
 
-.glyphicon-glass:before {
-    content: "\e001"
-}
-
 .glyphicon-music:before {
     content: "\e002"
 }
@@ -3102,7 +3098,7 @@ input[type=search] {
 input[type=checkbox],
 input[type=radio] {
     margin: 4px 0 0;
-    margin-top: 1px\9;
+    margin-top: 1px;
     line-height: normal
 }
 
@@ -3250,7 +3246,7 @@ input[type=search] {
 .radio input[type=radio],
 .radio-inline input[type=radio] {
     position: absolute;
-    margin-top: 4px\9;
+    margin-top: 4px;
     margin-left: -20px
 }
 
@@ -5124,7 +5120,7 @@ textarea.input-group-sm>.input-group-btn>.btn {
     max-height: 340px
 }
 
-@media (max-device-width:480px) and (orientation:landscape) {
+@media (max-width:480px) and (orientation:landscape) {
     .navbar-fixed-bottom .navbar-collapse,
     .navbar-fixed-top .navbar-collapse {
         max-height: 200px
@@ -7682,7 +7678,7 @@ button.close {
     margin: 1px;
     text-indent: -999px;
     cursor: pointer;
-    background-color: #000\9;
+    background-color: #000;
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid #fff;
     border-radius: 10px
