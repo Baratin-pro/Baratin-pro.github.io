@@ -264,7 +264,6 @@ a:hover {
 }
 .voffset p:last-child{
     font-size:16px;
-    color:rgb(136,136,136)!important
 }
 
 .voffset-lg {
@@ -737,6 +736,9 @@ h4 {
 .white {
     color: #FFFFFF!important;
 }
+.black{
+    color: black!important;
+}
 
 .portfolio-thumb {
     margin-bottom: 24px;
@@ -777,13 +779,13 @@ h4 {
     color: #F3976C!important;
 }
 
-.btn-atomic-tangerine {
-    background: #F3976C;
+.btn-black {
+    background: #000000;
     color: #FFFFFF!important;
 }
 
-.btn-atomic-tangerine:hover {
-    background: #c27956!important;
+.btn-black:hover {
+    background: #272727!important;
     color: #FFFFFF!important;
 }
 
