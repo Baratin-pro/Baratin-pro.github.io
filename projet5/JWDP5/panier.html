@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!--Meta-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+        <meta name="language" content="fr"> 
+		<!--Favicon-->
+		<link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
+		<!--Title and description-->
+		<title>Orinoco : formulaire de validation</title>
+        <meta name="description" content="Plus qu'un petit pas pour votre commande,  et un bond de géant pour vers l'adoption de votre ou vos article(s).">
+        <!--Open Graph-->
+        <meta property="og:title" content="Orinoco : formulaire de validation">
+        <meta property="og:description" content="Plus qu'un petit pas pour votre commande,  et un bond de géant pour vers l'adoption de votre ou vos article(s).">
+        <meta property="og:url" content="https://baratin-pro.github.io/projet5/JWDP5/panier.html">
+        <meta property="og:image" content="./images/logo.png">
+        <meta property="og:site_name" content="Orinoco">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="fr_FR">
+        <!--Twitter-->
+        <meta name="twitter:title" content="Orinoco : formulaire de validation">
+        <meta name="twitter:description" content="Plus qu'un petit pas pour votre commande,  et un bond de géant pour vers l'adoption de votre ou vos article(s).">
+        <meta name="twitter:url" content="https://baratin-pro.github.io/projet5/JWDP5/panier.html">
+        <meta name="twitter:image" content="./images/logo.png">
+        <meta name="twitter:image:alt" content="Image du logo d'Orinoco.">
+        <meta name="twitter:card" content="summary"/>
+        <!--Canonical-->
+        <link rel="canonical" href="https://baratin-pro.github.io/projet5/JWDP5/panier.html">
+        <!--Link-->
+        <script src="https://kit.fontawesome.com/2220ecbea4.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+<body>
+    <header class="bg-dark">
+        <div class="jumbotron mb-0 py-3">
+            <h1 class="text-center">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                  </svg>
+                  Orinoco
+            </h1>
+         </div>
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="col-12 navbar navbar-expand-lg navbar-dark">
+                    <ul class="col-12 navbar-nav">
+                        <li class="col-12 col-lg-6 nav-item text-right text-lg-center active">
+                            <div class="btn-group">
+                                <a href="index.html" class="btn btn-secondary">Produits</a>
+                            </div>
+                        </li>
+                        <li class="col-12 col-lg-6 nav-item text-right text-lg-center">
+                            <div class="btn-group dropleft">
+                                <button type="button" id="basket" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <span class="sr-only">flèche</span>
+                                </button>
+                                <div class="dropdown-menu"></div>
+                                <a href="panier.html" class="btn btn-secondary">Panier</a>
+                                
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h1 class="text-center mt-2 h2">
+            Validation de votre panier :
+        </h1>
+        <form action="http://localhost:3000/api/teddies/order" method="POST" id="formulaire" class="row border border-dark rounded m-2 pb-3">
+            <div class="col-sm-6">
+                    <div class="form-row">
+                        <div class="col-md mt-4">
+                            <label for="firstName">Prénom </label>
+                            <input class="form-control" type="text" name="firstName" id="firstName" required>
+                            <span></span>
+                        </div>
+                        <div class="col-md mt-4">
+                            <label for="lastName">Nom de famille </label>
+                            <input class="form-control" type="text" name="lastName" id="lastName" required>
+                            <span></span>
+                        </div>
+                    </div>
+                        <div class="form-row">
+                        <div class="col-md mt-4">
+                            <label for="adress">Adresse </label>
+                            <input class="form-control" type="text" name="adress" id="adress" required>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md mt-4">
+                            <label for="cp">Code postal  </label>
+                            <input class="form-control" type="number" name="cp" id="cp" required>
+                            <span></span>
+                        </div>
+                        <div class="col-md mt-4">
+                            <label for="city">Ville </label>
+                            <input class="form-control" type="text" name="city" id="city" required>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md mt-4">
+                            <label for="email">E-mail </label>
+                            <input class="form-control" type="email" name="email" id="email" required>
+                            <span></span>
+                        </div>
+                    </div>
+                    
+            </div>
+            <div class="col-sm-6 mt-4">
+                <h2 class="h5">Récapitulatif de la commande :</h2>
+                <div class="col mt-4">
+                    <input id="submit-validation" class="btn btn-dark" type="submit" value="Commander">
+                </div>
+            </div>
+        </form>
+    </div>
+     <!-- <script src="./dist/polyfill.bundle.js"></script>
+     <script src="./dist/app.bundle.js"></script> -->
+     <script type="text/javascript" src="./src/formulaire.js"></script> 
+    </body>
+</html>
