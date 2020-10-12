@@ -1,51 +1,56 @@
-//Fonction rajout l'élément et tous ces enfants s'il y a 
+/*
+*    Location : products list in the DOM
+*/
+const locationProductList = document.getElementById("teddies");
+/*
+*    Function : add the element and their children(if present) in the DOM 
+*/
 function appendDOM(elementParent,element,...moreArguments){
   elementParent.appendChild(element);
-    for(let i = 0; i < moreArguments.length; i++) {
-      if(moreArguments[i]){
-        element.appendChild(moreArguments[i]);
-      }
+  for(let i = 0; i < moreArguments.length; i++){
+    if(moreArguments[i]){
+      element.appendChild(moreArguments[i]);
+    }
   }
 }
-const listArticles = document.querySelector('div[teddies]');
-export default function createArticle(data){
+/*
+*   Function : creation of the products list in the DOM
+*/
+export default function createProductList(data){
   for(let i = 0; i < data.length; i++){
-    //Création des blogs articles
-    const cartArticles = document.createElement('div');
-    const attrCartArticles = document.createAttribute('cartTeddies');
-      cartArticles.id = data[i]._id;
-      cartArticles.className = "col-12 col-sm-5 col-md-3 col-lg-2 m-auto m-sm-3 p-3 border bg-warning";
-      cartArticles.setAttributeNode(attrCartArticles);
-      //Création du H2
-      const title = document.createElement('h2');
-        title.innerHTML = data[i].name;
-        title.className = "text-center h4";
-      //Création du blog de l'image
-      const frameImg = document.createElement('div');
-        frameImg.className= " col-5 col-sm-8 col-md-10 h-50 mx-auto";
-      //Création de l'image
-      const img = document.createElement('img');
-        img.src = data[i].imageUrl;
-        img.alt = "Peluche d'ourson nommée " + data[i].name + " vendu par l'entreprise Orinoco";
-        img.className = "w-100 h-100";
-      //Création du paragraphe du prix
-      const price = document.createElement('p');
-        price.innerHTML = (data[i].price/100) + " €";
-        price.className = "text-right font-weight-bold";
-      //Création du bouton
-      const formBtn = document.createElement('form');
-        formBtn.method = "GET";
-        formBtn.action = "product.html#" + data[i]._id;
-      const btn = document.createElement('input');
-        btn.type = "submit";
-        btn.value = "Description";
-        btn.className = "btn btn-dark w-100 mb-4";
-      //Ajout des éléments au DOM
-      if(listArticles){
-        appendDOM(listArticles,cartArticles,title,frameImg,price,formBtn);
-        appendDOM(frameImg,img);
-        appendDOM(formBtn,btn);
-      }
-      
+//Creation : blog articles
+    const listArticle = document.createElement("article");
+      listArticle.id = data[i]._id;
+      listArticle.className = "col-12 col-sm-5 col-md-3 col-lg-2 m-auto m-sm-3 p-3 border rounded shadow-lg bg-white";
+//Creation : H2
+    const articleTitle = document.createElement("h2");
+      articleTitle.innerHTML = data[i].name;
+      articleTitle.className = "text-center h4 text-nowrap";
+//Creation : blog images
+    const articleContainerImg = document.createElement("div");
+      articleContainerImg.className= " col-5 col-sm-8 col-md-10 h-50 mx-auto";
+//Creation : image
+    const articleImg = document.createElement("img");
+      articleImg.src = data[i].imageUrl;
+      articleImg.alt = "Peluche d'ourson nommée " + data[i].name + " vendu par l'entreprise Orinoco";
+      articleImg.className = "w-100 h-100";
+//Creation : paragraph articlePrice
+    const articlePrice = document.createElement("p");
+      articlePrice.innerHTML = (data[i].price/100) + " €";
+      articlePrice.className = "text-right font-weight-bold";
+//Creation : button
+    const articleFormBtn = document.createElement('form');
+      articleFormBtn.method = "GET";
+      articleFormBtn.action = "product.html#" + data[i]._id;
+    const articleBtn = document.createElement("input");
+      articleBtn.type = "submit";
+      articleBtn.value = "Description";
+      articleBtn.className = "btn btn-dark w-100 mb-4";
+//Add the elements in the DOM
+    if(locationProductList){
+      appendDOM(locationProductList,listArticle,articleTitle,articleContainerImg,articlePrice,articleFormBtn);
+      appendDOM(articleContainerImg,articleImg);
+      appendDOM(articleFormBtn,articleBtn);
+    }
   } 
 }
