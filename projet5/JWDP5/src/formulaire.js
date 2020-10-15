@@ -233,7 +233,6 @@ orderQuantity.addEventListener('change', ()=>{
     //Changes the value according to the quantity selected
                 orderSumPriceHT.innerHTML = "Prix hors taxe : " + recoveryStorage() + "€<br/> Taux de TVA (20%) : " + (Math.round((20/100) *recoveryStorage())) + "€<br/>  Prix TTC : " + ((recoveryStorage()) + (Math.round((20/100) *recoveryStorage()))) + "€";
                 }) 
-                console.log(recoveryStorage())
 //Creation : blog btn delete
             const orderContainerBtnDelete = document.createElement("div");
                 orderContainerBtnDelete.className = "m-1 p-0";
@@ -448,4 +447,3 @@ export  function evenementFormulaire(){
         })       
     }
 }
-

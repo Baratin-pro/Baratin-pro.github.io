@@ -19,9 +19,9 @@ const getTeddiesAll = async function(){
         }else{
             console.error('Retour du serveur : ', response.status);
           }
-        }catch(e){
-          console.log(e)
-        }
+    }catch(e){
+      console.log(e)
+    }
 }
 /* **************** Activation of functions *****************
 *      
