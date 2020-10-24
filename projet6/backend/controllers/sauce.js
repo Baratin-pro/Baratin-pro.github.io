@@ -8,6 +8,8 @@ const fs = require("fs");
  */
 exports.createSauce = (req, res, next) => {
   const sauceObject = JSON.parse(req.body.sauce);
+  sauceObject.likes = 0;
+  sauceObject.dislikes = 0;
   delete sauceObject._id;
   const sauce = new Sauce({
     ...sauceObject,
