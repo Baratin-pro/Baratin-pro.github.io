@@ -1,11 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!--Meta-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="language" content="fr">
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <!--Title and description-->
+    <title>Baratin Andrew - Développeur web</title>
+    <meta name="description"
+        content="Bienvenue sur le portfolio de Baratin Andrew, Développeur Web. En recherche d'alternance. ">
+    <!--Open Graph-->
+    <meta property="og:title" content="Baratin Andrew - Développeur web">
+    <meta property="og:description"
+        content="Bienvenue sur le portfolio de Baratin Andrew, Développeur Web. En recherche d'alternance. ">
+    <meta property="og:url" content="https://baratin-pro.github.io/index.html">
+    <!--meta property="og:image" content="./img/logo.png"-->
+    <meta property="og:site_name" content="Portfolio Baratin">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <!--Twitter-->
+    <meta name="twitter:title" content="Baratin Andrew - Développeur web">
+    <meta name="twitter:description"
+        content="Bienvenue sur le portfolio de Baratin Andrew, Développeur Web. En recherche d'alternance. ">
+    <meta name="twitter:url" content="https://baratin-pro.github.io/index.html">
+    <!--meta name="twitter:image" content="./img/logo.png"-->
+    <meta name="twitter:image:alt" content="Image du logo du portfolio de Baratin.">
+    <meta name="twitter:card" content="summary" />
+    <!--Canonical-->
+    <link rel="canonical" href="https://baratin-pro.github.io/index.html">
+    <!--Link-->
     <script src="https://kit.fontawesome.com/2220ecbea4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css" />
 </head>
@@ -16,7 +42,7 @@
             <img class="portfolio-header__top__img" src="img/l_deathNote.jpg" alt="image de profil" />
         </div>
         <div>
-            <div class="portfolio-header__menuBurger" onclick="menuVisibility()">
+            <div class="portfolio-header__menuBurger" onclick="menuVisibility()" aria-label="Menu burger">
                 <div class="portfolio-header__menuBurger__line"></div>
                 <div class="portfolio-header__menuBurger__line"></div>
                 <div class="portfolio-header__menuBurger__line"></div>
@@ -26,18 +52,18 @@
             <a class="portfolio-header__menuNav__tabletComputer__link" href="#about">A propos</a>
             <a class="portfolio-header__menuNav__tabletComputer__link" href="#skill">Competences</a>
             <a class="portfolio-header__menuNav__tabletComputer__link" href="#formation">Formations</a>
-            <a class="portfolio-header__menuNav__tabletComputer__link" href="#portfolio">Portfolio</a>
+            <a class="portfolio-header__menuNav__tabletComputer__link" href="#project">Projets</a>
         </nav>
     </header>
     <nav class="portfolio-header__menuNav__mobile" id="contentLink">
         <a class="portfolio-header__menuNav__mobile__link" href="#about">A propos</a>
         <a class="portfolio-header__menuNav__mobile__link" href="#skill">Competences</a>
         <a class="portfolio-header__menuNav__mobile__link" href="#formation">Formations</a>
-        <a class="portfolio-header__menuNav__mobile__link" href="#portfolio">Portfolio</a>
+        <a class="portfolio-header__menuNav__mobile__link" href="#project">Projets</a>
     </nav>
     <main class="portfolio-body">
 
-        <div class="portfolio-body__titlePage__contentOutside" id="about">
+        <div class="portfolio-body__titlePage__contentOutside" id="about" role="region">
             <article class="portfolio-body__titlePage__contentInside">
                 <h1 class="portfolio-body__titlePage__contentInside__title">
                     Baratin Andrew
@@ -55,16 +81,16 @@
             </h2>
             <div>
                 <span class="cross cross__top__left"></span><span class="cross cross__top__right"></span>
-                <table class="portfolio-aboutAndProjects">
+                <table class="portfolio-aboutAndProjects" role="presentation">
                     <tr class="portfolio-body__article__text">
-                        <td class="array__column tablet-array_column">alternance</td>
+                        <th class="array__column tablet-array_column" scope="row">alternance</th>
                         <td class="array__column">
                             <span class="mobile-array_column">alternance :</span>
                             Dans le développement web, ou dans data engineer.
                         </td>
                     </tr>
                     <tr class="portfolio-body__article__text">
-                        <td class="array__column tablet-array_column">rythme</td>
+                        <th class="array__column tablet-array_column" scope="row">rythme</th>
                         <td class="array__column">
                             <span class="mobile-array_column">rythme :</span> 2 semaines à l'entreprise et 1 semaine
                             à
@@ -72,7 +98,7 @@
                         </td>
                     </tr>
                     <tr class="portfolio-body__article__text">
-                        <td class="array__column tablet-array_column">developpement</td>
+                        <th class="array__column tablet-array_column" scope="row">developpement</th>
                         <td class="array__column"> <span class="mobile-array_column">developpement :</span>
                             J'ai saisi l'opportunité de ma reconversion professionnelle,
                             pour me plonger dans la programmation, une passion d'enfance.
@@ -81,7 +107,7 @@
                         </td>
                     </tr>
                     <tr class="portfolio-body__article__text">
-                        <td class="array__column tablet-array_column">transmettre</td>
+                        <th class="array__column tablet-array_column" scope="row">transmettre</th>
                         <td class="array__column"> <span class="mobile-array_column">transmettre :</span>
                             Je profite de mes temps libres, pour aider, transmettre et
                             porter assistance aux apprenants qui passent la même formation
@@ -118,7 +144,7 @@
                                     class="portfolio-skill__diagram__table__body__key fas fa-key"></em> MySQL
                             </li>
                             <li class="portfolio-skill__diagram__table__body__text"> <img src="./img/diamont_orange.png"
-                                    alt="diamond" class="portfolio-skill__diagram__table__body__diamond">
+                                    alt="diamond orange" class="portfolio-skill__diagram__table__body__diamond">
                                 MongoDB</li>
                         </ul>
                         <div class="portfolio-skill__diagram__table__footer"></div>
@@ -132,13 +158,15 @@
                                     class="portfolio-skill__diagram__table__body__key fas fa-key"></em> Node.js/Express
                             </li>
                             <li class="portfolio-skill__diagram__table__body__text"> <img src="./img/diamont_orange.png"
-                                    alt="diamond" class="portfolio-skill__diagram__table__body__diamond">
+                                    alt="diamond orange" class="portfolio-skill__diagram__table__body__diamond">
                                 SQL</li>
                             <li class="portfolio-skill__diagram__table__body__text"><img src="./img/diamond.svg"
-                                    alt="diamond" class="portfolio-skill__diagram__table__body__diamond"> Python
+                                    alt="diamond secondary" class="portfolio-skill__diagram__table__body__diamond">
+                                Python
                             </li>
                             <li class="portfolio-skill__diagram__table__body__text"><img src="./img/diamond.svg"
-                                    alt="diamond" class="portfolio-skill__diagram__table__body__diamond"> Ruby</li>
+                                    alt="diamond secondary" class="portfolio-skill__diagram__table__body__diamond"> Ruby
+                            </li>
                         </ul>
                         <div class="portfolio-skill__diagram__table__footer"></div>
                     </div>
@@ -153,10 +181,12 @@
                                     alt="diamond" class="portfolio-skill__diagram__table__body__diamond">
                                 CSS / SCSS</li>
                             <li class="portfolio-skill__diagram__table__body__text"><img src="./img/diamond.svg"
-                                    alt="diamond" class="portfolio-skill__diagram__table__body__diamond"> Javascript
+                                    alt="diamond secondary" class="portfolio-skill__diagram__table__body__diamond">
+                                Javascript
                             </li>
                             <li class="portfolio-skill__diagram__table__body__text"><img src="./img/diamond.svg"
-                                    alt="diamond" class="portfolio-skill__diagram__table__body__diamond"> Vue.js</li>
+                                    alt="diamond secondary" class="portfolio-skill__diagram__table__body__diamond">
+                                Vue.js</li>
                         </ul>
                         <div class="portfolio-skill__diagram__table__footer"></div>
                     </div>
@@ -175,16 +205,21 @@
                                     class="portfolio-skill__diagram__table__body__key fas fa-key"></em> Forte capacité
                                 d'apprentissage</li>
                             <li class="portfolio-skill__diagram__table__body__text"><img src="./img/diamont_orange.png"
-                                    alt="diamond" class="portfolio-skill__diagram__table__body__diamond"> Travail en
+                                    alt="diamond orange" class="portfolio-skill__diagram__table__body__diamond"> Travail
+                                en
                                 équipe</li>
                             <li class="portfolio-skill__diagram__table__body__text"> <img src="./img/diamond.svg"
-                                    alt="diamond" class="portfolio-skill__diagram__table__body__diamond"> Autonome</li>
+                                    alt="diamond secondary" class="portfolio-skill__diagram__table__body__diamond">
+                                Autonome</li>
                             <li class="portfolio-skill__diagram__table__body__text"><img src="./img/diamond.svg"
-                                    alt="diamond" class="portfolio-skill__diagram__table__body__diamond"> Organisé</li>
+                                    alt="diamond secondary" class="portfolio-skill__diagram__table__body__diamond">
+                                Organisé</li>
                             <li class="portfolio-skill__diagram__table__body__text"><img src="./img/diamond.svg"
-                                    alt="diamond" class="portfolio-skill__diagram__table__body__diamond"> Rigoureux</li>
+                                    alt="diamond secondary" class="portfolio-skill__diagram__table__body__diamond">
+                                Rigoureux</li>
                             <li class="portfolio-skill__diagram__table__body__text"><img src="./img/diamond.svg"
-                                    alt="diamond" class="portfolio-skill__diagram__table__body__diamond"> Forte capacité
+                                    alt="diamond secondary" class="portfolio-skill__diagram__table__body__diamond">
+                                Forte capacité
                                 d'adaptation</li>
                         </ul>
                         <div class="portfolio-skill__diagram__table__footer"></div>
@@ -207,23 +242,23 @@
             </h2>
             <div>
                 <span class="cross cross__top__left"></span><span class="cross cross__top__right"></span>
-                <table class="portfolio-aboutAndProjects">
+                <table class="portfolio-aboutAndProjects" role="presentation">
                     <tr class="portfolio-body__article__text">
-                        <td class="array__column tablet-array_column">Titre</td>
+                        <th class="array__column tablet-array_column" scope="row">Titre</th>
                         <td class="array__column">
                             <span class="mobile-array_column">Titre :</span> RNCP
                             Niveau 6 : Concepteur intégrateur DEVOPS
                         </td>
                     </tr>
                     <tr class="portfolio-body__article__text">
-                        <td class="array__column tablet-array_column">Lieu</td>
+                        <th class="array__column tablet-array_column" scope="row">Lieu</th>
                         <td class="array__column">
                             <span class="mobile-array_column">Lieu :</span> EPSI, Bordeaux en
                             alternance
                         </td>
                     </tr>
                     <tr class="portfolio-body__article__text">
-                        <td class="array__column tablet-array_column">Date</td>
+                        <th class="array__column tablet-array_column" scope="row">Date</th>
                         <td class="array__column"> <span class="mobile-array_column">Date :</span>
                             A partir de septembre 2021
                         </td>
@@ -234,22 +269,22 @@
             </div>
             <div class="separatorArray">
                 <span class="cross cross__top__left"></span><span class="cross cross__top__right"></span>
-                <table class="portfolio-aboutAndProjects">
+                <table class="portfolio-aboutAndProjects" role="presentation">
                     <tr class="portfolio-body__article__text">
-                        <td class="array__column tablet-array_column">Titre</td>
+                        <th class="array__column tablet-array_column" scope="row">Titre</th>
                         <td class="array__column">
                             <span class="mobile-array_column">Titre :</span> RNCP Niveau 5
                             : Développeur web
                         </td>
                     </tr>
                     <tr class="portfolio-body__article__text">
-                        <td class="array__column tablet-array_column">Lieu</td>
+                        <th class="array__column tablet-array_column" scope="row">Lieu</th>
                         <td class="array__column">
                             <span class="mobile-array_column">Lieu :</span> OpenClassrooms, à distance
                         </td>
                     </tr>
                     <tr class="portfolio-body__article__text">
-                        <td class="array__column tablet-array_column">Date</td>
+                        <th class="array__column tablet-array_column" scope="row">Date</th>
                         <td class="array__column"> <span class="mobile-array_column">Date :</span>
                             De juillet 2020 à janvier 2021
                         </td>
@@ -262,6 +297,6 @@
     </main>
 </body>
 
-<script src="./script.js"></script>
+<script type="text/javascript" src="./script.js"></script>
 
 </html>
